@@ -1,0 +1,49 @@
+.header-wrap{
+    background-color: white;
+    /* color: #ffffff; */
+    text-align: center;
+    padding: 35px;
+}
+
+.header-wrap a{
+    text-decoration: none;
+}
+
+#site-name{
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}
+
+h1#site-name {
+    display: inline;
+}
+
+img#account-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+}
+
+img#search-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+}
+
+img#cart-icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+}
+
+.header-wrap-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 31px;
+    margin-left: 90%;
+}
