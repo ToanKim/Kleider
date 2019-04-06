@@ -10,9 +10,11 @@
 }
 
 #site-name{
-    font-weight: bold;
     font-size: 40px;
     color: black;
+    font-family: brigest-script;
+    letter-spacing: 5px;
+    font-size: 60px;
 }
 
 h1#site-name {

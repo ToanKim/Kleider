@@ -39,6 +39,7 @@
 
 .nav-bar-item:hover > .dropdown > li {
     display: block;
+    z-index: 2 !important;
 }
 
 .nav-bar-item > .dropdown > li > a {
