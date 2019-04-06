@@ -1,8 +1,12 @@
 <div>
     <app-main-header></app-main-header>
     <app-nav-bar></app-nav-bar>
-    
-    
+
+    <div class="shipping-container">
+        <app-leaflet-map class="float-block" id="map"></app-leaflet-map>
+        
+        <app-calendar class="float-block" id="calendar"></app-calendar>
+    </div>
 </div>
 
 <router-outlet></router-outlet>
