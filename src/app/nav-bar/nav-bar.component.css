@@ -1,9 +1,10 @@
 .nav-bar{
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 10px 0 0 0;
     width: 80%;
     margin-left: 10%;
+
     display: flex;
     justify-content: space-between;
 }
@@ -30,6 +31,8 @@
 .nav-bar-item > .dropdown {
     list-style-type: none;
     position: absolute;
+    z-index: 999;
+    background: white;
 }
 
 .nav-bar-item > .dropdown > li{
@@ -39,7 +42,7 @@
 
 .nav-bar-item:hover > .dropdown > li {
     display: block;
-    z-index: 2 !important;
+
 }
 
 .nav-bar-item > .dropdown > li > a {
