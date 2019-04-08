@@ -29,6 +29,8 @@ export class LeafletMapComponent implements OnInit {
         results.addLayer(L.marker(data.results[i].latlng));
       }
     });
+
+    
   }
 
 }

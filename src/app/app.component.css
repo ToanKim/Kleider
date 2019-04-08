@@ -4,23 +4,12 @@
 }
 
 .shipping-container {
-    display: flex;
-    flex-wrap: nowrap;
     width: 80%;
     margin: 0 auto;
+    position: static;
 }
 
-.float-block {
-    float: left;
-    box-sizing: border-box;
+#calendar {
+    
 }
 
-.float-block#map {
-    width: 60%;
-    border: 1px solid gray;
-}
-
-.float-block#calendar {
-    width: 40%;
-    text-align: center; 
-}
