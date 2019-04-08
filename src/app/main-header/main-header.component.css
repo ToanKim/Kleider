@@ -2,8 +2,8 @@
     background-color: white;
     /* color: #ffffff; */
     text-align: center;
-    padding: 35px;
-    border-bottom: 0.05px solid gray;
+    padding-top: 35px;
+    border-bottom: 0.05px solid #ededed;
 }
 
 .header-wrap a{
@@ -16,6 +16,7 @@
     font-family: brigest-script;
     letter-spacing: 5px;
     font-size: 60px;
+    padding: 0;
 }
 
 h1#site-name {

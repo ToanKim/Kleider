@@ -139,7 +139,7 @@
 
 .copyright {
     text-align: center;
-    border-top: 1px solid gray;
+    border-top: 1px solid #ededed;
     padding-top: 10px;
     margin-bottom: 10px;
 }
@@ -154,4 +154,8 @@
 
 .copyright > a:hover {
     color: lightblue;
+}
+
+.number-contact a {
+    text-decoration: none;
 }
