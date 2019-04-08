@@ -1,6 +1,7 @@
 .footer {
     display: block;
     width: 100%;
+    margin-top: 20px;
 }
 
 .top-footer {
@@ -70,18 +71,10 @@
 
 .input-group button {
     height: 46px;
-    background: green;
-    color: white;
     right: 0;
     top: 0;
     padding: 13px 25px;
 }
-
-input, button {
-    margin: 0;
-}
-
-
 
 .phone-img {
     background-repeat: no-repeat;
@@ -148,6 +141,7 @@ input, button {
     text-align: center;
     border-top: 1px solid gray;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 .copyright > a {
