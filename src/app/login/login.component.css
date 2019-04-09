@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    height: 550px;
+}
+
+.loginname {
+	width: 50%;
+	float: left;
+    height:550px;
+    border-top: 0.5px solid #ededed;
+}
+
+.loginname > h1 {
+    margin-top: 25%;
+    font-size: 60px;
+    margin-left: 20%;
+}
+
+.loginname h2 {
+    width: 80px;
+    margin-left: 20%;
+    margin-top: 5%;
+    border-bottom: 4px solid;
+}
+
+
+
+.login-box {
+	width: 50%;
+    float: right;
+    height: 550px;
+    border-left: 0.5px solid #ededed;
+    border-top: 0.5px solid #ededed;
+}
+
+.login-form-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.textbox, .login-button-container{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.textbox input{
+    height: 46px;
+    border: 1px solid #e7e7e7;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 0 20px;
+    background: #ededed;
+    color: #252a2b;
+    width: 80%;
+}
+
+.textbox input:focus {
+    background: white;
+}
+
+.login-button-container {
+    display: inline;
+}
+
+.login-button-container button {
+    float: left;
+    width: 30%;
+    height: 45px;
+}
+
+.forgot-register-container {
+    float: right;
+    width: 65%;
+}
+
+.forgot-register-container a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.forgot-register-container a:visited {
+    color: black;
+}
+
+.forgot-register-container a:hover {
+    color: lightblue;
+}

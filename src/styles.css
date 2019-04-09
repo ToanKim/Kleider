@@ -10,3 +10,30 @@
     font-family: brigest-script;
     src: url(assets/fonts/BrigestScript.ttf) format("truetype");
 }
+
+
+input, button {
+    margin: 0;
+}
+
+button {
+    text-align: center;
+    background-color: #65d1e6;
+    color: white;
+    padding: 10px 28px;
+    display: inline-block;
+    position: relative;
+    letter-spacing: 1px;
+    border: 1px solid white;
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+button:hover {
+    background: white;
+    color: black;
+    border: 1px solid #65d1e6; 
+}
+
+
