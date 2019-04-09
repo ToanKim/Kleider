@@ -70,3 +70,23 @@ CALENDAR
 .blue-button {
     width: 100%;
 }
+
+.shipping-container {
+  width: 90%;
+  margin: 20px auto;
+  position: static;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shipping-container-left {
+  width: 100%;
+}
+
+.shipping-text-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+
