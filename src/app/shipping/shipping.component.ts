@@ -17,10 +17,7 @@ export class ShippingComponent implements OnInit {
       attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    var searchLayer = L.layerGroup().addTo(map);
-    //... adding data in searchLayer ...
-    map.addControl( new L.Control.Search({layer: searchLayer}) );
-    //searchLayer is a L.LayerGroup contains searched markers
+    
   }
 
 }

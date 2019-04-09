@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Quicksand', sans-serif ;
     box-sizing: border-box;
 }
 
@@ -36,4 +36,6 @@ button:hover {
     border: 1px solid #65d1e6; 
 }
 
-
+a {
+    color: black;
+}

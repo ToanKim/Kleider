@@ -1,9 +1,12 @@
 <div>
     <app-main-header></app-main-header>
     <app-nav-bar></app-nav-bar>
-    
 
-    <app-footer></app-footer>
+    <div id="page-container">
+        <router-outlet></router-outlet>
+    </div>
+
+    <app-footer id="footer"></app-footer>
 </div>
 
-<router-outlet></router-outlet>
+

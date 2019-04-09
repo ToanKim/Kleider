@@ -1,0 +1,140 @@
+.container {
+    width: 100%;
+    height: 550px;
+}
+
+.registername {
+	width: 50%;
+	float: left;
+    height:550px;
+    border-top: 0.5px solid #ededed;
+}
+
+.registername h1 {
+    margin-top: 25%;
+    font-size: 60px;
+    margin-left: 20%;
+}
+.registername h2 {
+    width: 80px;
+    margin-left: 20%;
+    margin-top: 5%;
+    border-bottom: 4px solid;
+}
+
+.register-box {
+	width: 50%;
+    float: right;
+    height: 550px;
+    border-left: 0.5px solid #ededed;
+    border-top: 0.5px solid #ededed;
+}
+
+.register-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 3%;
+}
+
+.textbox, .register-button-container, .gender-choice-container {
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.textbox input{
+    height: 46px;
+    border: 1px solid #e7e7e7;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 0 20px;
+    background: #ededed;
+    color: #252a2b;
+    width: 80%;
+}
+
+.textbox input:focus {
+    background: white;
+}
+
+/*-------------------
+Radio button
+-----------------*/
+
+.gender-choice-container {
+    margin-top: 5%;
+    width: 50%;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    display: none;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: black;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #65d1e6;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+}
+/* ----------------- END of GENDER BUTTON -------------------------*/
+
+.register-button-container {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.register-button-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.register-button-container a:hover {
+    color: lightblue;
+}
+
+
+
+
+
+
