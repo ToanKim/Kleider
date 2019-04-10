@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ShippingComponent,
     LoginComponent,
     RegisterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
