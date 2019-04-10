@@ -1,9 +1,10 @@
+
+
 .header-wrap{
     background-color: white;
     /* color: #ffffff; */
     text-align: center;
-    padding-top: 35px;
-    border-bottom: 0.05px solid #ededed;
+    padding: 35px;
 }
 
 .header-wrap a{
@@ -16,38 +17,60 @@
     font-family: brigest-script;
     letter-spacing: 5px;
     font-size: 60px;
-    padding: 0;
 }
 
 h1#site-name {
     display: inline;
 }
 
-img#account-icon {
-    width: 30px;
+.header-wrap-icon {
+    width: 30%;
     height: 30px;
-    position: absolute;
-    top: 15px;
+    margin-left: 70%;
+    display: flex;
+    justify-content: space-between;
 }
 
-img#search-icon {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 15px;
+/* -------------
+SEARCH BOX
+---------------*/
+.search-container {
+    float: right;
 }
+
+input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    background: #ededed;
+    border: none;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-right: 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
+/*-------- END OF SEARCH BOX -----------*/
 
 img#cart-icon {
     width: 30px;
     height: 30px;
-    position: absolute;
     top: 15px;
 }
 
-.header-wrap-icon {
-    display: flex;
-    justify-content: space-between;
-    width: 100px;
-    height: 31px;
-    margin-left: 90%;
+img#account-icon {
+    width: 30px;
+    height: 30px;
+    top: 15px;
 }
+
+
