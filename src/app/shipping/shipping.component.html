@@ -6,7 +6,7 @@
   <div class="shipping-container-right">
       <div class="shipping-text-container">
           <h2 style="color:red">Shipping distance</h2>
-          <h3>12 km</h3>
+          <h3>{{ distance }} km</h3>
       </div>
 
       <div class="shipping-text-container">
@@ -24,9 +24,14 @@
         <input type="date" name="shipping-date" id="shipping-date">
       </div>
 
-      <button type="button" class="blue-button">Back to cart</button>
+      <a href="/cart">
+        <button type="button" class="blue-button">Back to cart</button>
+      </a>
       <p><br></p>
-      <button type="button" class="blue-button">Confirm</button>
+      
+      <a href="/">
+        <button type="button" class="blue-button">Confirm</button>
+      </a>
   </div>
   
 
