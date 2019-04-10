@@ -24,10 +24,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/leaflet/leaflet.css"
+              "src/assets/leaflet/leaflet.css",
+              "node_modules/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"
             ],
             "scripts": [
-              "src/assets/leaflet/leaflet.js"
+              "src/assets/leaflet/leaflet.js",
+              "node_modules/esri-leaflet/dist/esri-leaflet.js",
+              "node_modules/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.js"
             ],
             "es5BrowserSupport": true
           },

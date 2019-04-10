@@ -1,0 +1,55 @@
+/* *{
+    background-color: aliceblue;
+} */
+
+.container{
+    position: relative;
+    width: 90%;
+    margin: 20px;
+}
+img{
+    max-height: 400px;
+    margin-left: 5px 5px 5px 5px;
+}
+
+.image, .product{
+    position: absolute;
+    display: inline;
+}
+
+.product{
+    height: 20px;
+    width: 100px;
+    text-align: center;
+    background-color: aqua;
+    right: 0;
+}
+
+.ghichu,.pay{
+    position: absolute;
+    display: inline;
+}
+
+.ghichu{
+    height: 100px;
+    width: 400px;
+    color: white;
+    position: absolute;
+    background-color: rgb(206, 193, 193);
+}
+
+.pay{
+    right: 0;
+}
+
+.qty, .price{
+    position: absolute;
+    display: inline;
+}
+
+.price{
+    right: 0;
+}
+.tshirt{
+    font-weight: bold;
+}
