@@ -1,6 +1,7 @@
-/* *{
-    background-color: aliceblue;
-} */
+.big-container {
+    width: 100%;
+    min-height: 500px;
+}
 
 .container{
     position: relative;

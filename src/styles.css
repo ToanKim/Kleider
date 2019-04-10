@@ -5,7 +5,7 @@
     font-family: 'Quicksand', sans-serif ;
     box-sizing: border-box;
 }
-/* hello this is VUx */
+
 @font-face {
     font-family: brigest-script;
     src: url(assets/fonts/BrigestScript.ttf) format("truetype");
@@ -27,7 +27,7 @@ button {
     border: 1px solid white;
     cursor: pointer;
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
