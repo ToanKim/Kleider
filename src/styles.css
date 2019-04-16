@@ -18,7 +18,8 @@ input, button {
 
 button {
     text-align: center;
-    background-color: #65d1e6;
+    font-weight: bold;
+    background-color: #00b6f6;
     color: white;
     padding: 10px 28px;
     display: inline-block;
