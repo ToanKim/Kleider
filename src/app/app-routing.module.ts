@@ -5,13 +5,15 @@ import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'shipping', component: ShippingComponent},
-  { path: 'homepage', component: MainPageComponent}
+  { path: 'homepage', component: MainPageComponent},
+  { path: 'pro-inf', component: ProductInfoComponent}
 ];
 
 @NgModule({
