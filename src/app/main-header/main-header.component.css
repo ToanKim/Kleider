@@ -29,6 +29,7 @@ h1#site-name {
     margin-left: 70%;
     display: flex;
     justify-content: space-between;
+    position: sticky;
 }
 
 /* -------------
@@ -43,6 +44,7 @@ input[type=text] {
     font-size: 17px;
     background: #ededed;
     border: none;
+    outline: none;
 }
 
 .search-container button {
