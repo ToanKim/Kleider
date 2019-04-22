@@ -19,19 +19,19 @@
     <div id="bottom-right-container">
       <div id="info-container">
         <div class="textbox">
-          <h3>Distance</h3><h4>12km</h4>
+          <h3>Distance</h3><h4>{{ distance }} km</h4>
         </div>
         <div class="textbox">
           <h3>Cost</h3>
-          <h4>12.000 VND</h4>
+          <h4>{{ cost }} VND</h4>
         </div>
         <div class="textbox">
           <h3>Total</h3>
-          <h4>24.000 VND</h4>
+          <h4>{{ total }} VND</h4>
         </div>
-        <div class="textbox">
+        <div class="textbox" ng-app="myApp" ng-controller="datCtrl">
           <h3>Date</h3>
-          <h4>31/04/2019</h4>
+          <h4>{{myDate | date:'dd/MM/yyyy'}}</h4>
         </div>
       </div>
   
