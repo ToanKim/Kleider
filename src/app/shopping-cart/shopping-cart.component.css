@@ -1,5 +1,4 @@
 .big-container {
-    padding-top: 2em;
     width: 100%;
     min-height: 500px;
 }
@@ -14,18 +13,18 @@ img{
     margin-left: 5px 5px 5px 5px;
 }
 
-/* .image, .product{
+.image, .product{
     position: absolute;
     display: inline;
-} */
-/* 
+}
+
 .product{
     height: 20px;
     width: 100px;
     text-align: center;
     background-color: aqua;
     right: 0;
-} */
+}
 
 .ghichu,.pay{
     position: absolute;
@@ -56,96 +55,40 @@ img{
     font-weight: bold;
 }
 
-#top-container{
-    width: 100%;
+.item, .quanty{
     display: flex;
-    height: 20%;
+    flex-direction: row;
 }
-
-#top-left-container,
-#top-right-container {
-  text-align: center;
-  margin: auto 0;
-}
-
-#top-left-container{
-    flex: 60%;
-}
-
-#top-right-container{
-    flex: 40%;
-}
-
- /* Progress bar  */
-#progress-bar {
-    padding-left: 3em;  
-    counter-reset: step;
-  }
-  
-  #progress-bar li {
-    list-style-type: none;
-    width: 33.3333%;
-    float: left;
-    text-align: center;
-    color: #333;
-  
-    position: relative;
-  }
-  
-  #progress-bar li:before {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  
-    border-radius: 50%;
-    border: 2px solid; 
-    display: block;
-  
-    margin: 0 auto;
-  
-    text-align: center;
+.item{
     background: #ededed;
-  
-    content: counter(step);
-    counter-increment: step;
-  }
-  
-  #progress-bar li:after {
-    width: 100%;
-    height: 3px;
-    content: '';
-    background: black;
-    position: absolute;
-  
-    top: 25%;
-    left: -50%;
-    z-index: -1;
-  }
-  
-  #progress-bar li:first-child::after {
-    content: none;
-  }
-  
-  #progress-bar li.passed {
-    color: #00b6f6;
-    font-weight: bold;
-  }
-  
-  #progress-bar li.active:before, 
-  #progress-bar li.passed:before {
-    border-color: #00b6f6;
-    color: white;
-    background: #00b6f6;
-  }
-  
-  #progress-bar li.active {
-    color: #00b6f6;
-    font-weight: bold;
-  }
-  
-  #progress-bar li.passed:after,
-  #progress-bar li.active:after {
-    background-color: #00b6f6;
-  }
-  
-  
+    font-weight: 500;
+    font-size: 14px;
+    height: 25px;
+    padding: 0;
+    text-align: center;
+    width: 35px;
+    border: 1px solid #dadbdd;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    float: left;
+    -webkit-appearance: none;
+}
+.quanty{
+    background: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    color: #abafb2;
+    height: 25px;
+    padding-left: 0;
+    text-align: center;
+    width: 25px;
+    border: 1px solid #dadbdd;
+    border-radius: 0;
+    float: left;
+    -webkit-appearance: none;
+}
+
+button{
+    cursor: pointer;
+}
