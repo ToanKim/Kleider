@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
@@ -25,6 +26,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     RegisterComponent,
     ShoppingCartComponent,
     MainPageComponent,
+    ProductInfoComponent,
     AboutPageComponent
   ],
   imports: [
