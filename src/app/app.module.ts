@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     ShoppingCartComponent,
     MainPageComponent,
     ProductInfoComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
