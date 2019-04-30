@@ -7,6 +7,7 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'shipping', component: ShippingComponent},
   { path: 'homepage', component: MainPageComponent},
+  { path: 'about', component: AboutPageComponent},
+  { path: 'search-result', component: SearchResultComponent},
   { path: 'pro-inf', component: ProductInfoComponent},
   { path: 'about', component: AboutPageComponent}
 ];
