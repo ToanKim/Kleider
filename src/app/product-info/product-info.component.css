@@ -1,0 +1,29 @@
+.container{
+    padding-top: 5em;
+    display: inline;
+    display: flex;
+    flex-direction: row;
+}
+.pro-loop{
+    display: block;
+    position: static;
+    overflow: visible;
+    height: 100%;
+    width: 100%;
+}
+.select-swap{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-img{
+    width: 50%;
+    float: left;
+}
+.abc {
+	width: 40%;
+    float: right;
+    border-left: 0.5px solid #ededed;
+    border-top: 0.5px solid #ededed;
+}
+
