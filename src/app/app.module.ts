@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { ServerServicesService } from './server-services.service';
 
 @NgModule({
   declarations: [
@@ -25,14 +28,16 @@ import { AboutPageComponent } from './about-page/about-page.component';
     RegisterComponent,
     ShoppingCartComponent,
     MainPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [ServerServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

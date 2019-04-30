@@ -5,9 +5,11 @@
     
     <div class="header-wrap-icon">
         <div class="search-container">
-            <form action="/action_page.php">
-              <input type="text" placeholder="Search.." name="search">
-              <button type="submit"><i class="fa fa-search"></i></button>
+            <form action="search-result">
+                <input type="text" placeholder="Search.." name="search" #search>
+                <button type="submit" (click)="sendSearch(search.value)" alt="search-icon" title="Search">
+                    <i class="fa fa-search"></i>
+                </button>
             </form>
           </div>
 
