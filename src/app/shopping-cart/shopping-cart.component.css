@@ -41,6 +41,8 @@ img{
 
 .pay{
     right: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .qty, .price{
@@ -54,6 +56,22 @@ img{
 .tshirt{
     font-weight: bold;
 }
+
+.quanty{
+    background: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    color: #abafb2;
+    height: 25px;
+    padding-left: 0;
+    text-align: center;
+    width: 25px;
+    border: 1px solid #dadbdd;
+    border-radius: 0;
+    float: left;
+    -webkit-appearance: none;
+}
+
 
 .item, .quanty{
     display: flex;
@@ -73,22 +91,4 @@ img{
     border-radius: 0;
     float: left;
     -webkit-appearance: none;
-}
-.quanty{
-    background: #fff;
-    font-weight: 500;
-    font-size: 14px;
-    color: #abafb2;
-    height: 25px;
-    padding-left: 0;
-    text-align: center;
-    width: 25px;
-    border: 1px solid #dadbdd;
-    border-radius: 0;
-    float: left;
-    -webkit-appearance: none;
-}
-
-button{
-    cursor: pointer;
 }
