@@ -1,19 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 declare let L;
 
 @Component({
   selector: 'app-shipping',
   templateUrl: './shipping.component.html',
-  styleUrls: ['./shipping.component.css']
+  styleUrls: ['./shipping.component.css'],
+  providers: [DatePipe]
 })
 export class ShippingComponent implements OnInit {
   
-  distance:number = 0;
+  distance: number = 0;
+  cost: number = 0;
+  total: number = this.cost;
+
+  myDate = new Date();
 
   constructor() { }
 
   ngOnInit() {
+
+
+    // Map
     const map = L.map('map').setView([10.762622, 106.660172], 13);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

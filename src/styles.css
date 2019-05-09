@@ -19,6 +19,7 @@ input, button {
 
 button {
     text-align: center;
+    font-weight: bold;
     background-color: #00b6f6;
     color: white;
     padding: 10px 28px;
