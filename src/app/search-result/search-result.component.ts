@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerServicesService } from 'src/app/server-services.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-search-result',
@@ -8,8 +9,14 @@ import { ServerServicesService } from 'src/app/server-services.service';
 })
 export class SearchResultComponent implements OnInit {
 
-  constructor(private serverServices: ServerServicesService) {
-
+  product: any[];
+  constructor(private db: AngularFireDatabase,
+              private serverServices: ServerServicesService){
+    db.list('Vu-test').valueChanges()
+      .subscribe(product => 
+        {this.product = product;
+          console.log(this.product);
+        });
   }
 
   private value: string;
