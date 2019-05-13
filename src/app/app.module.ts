@@ -13,6 +13,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { SupportComponent } from './support/support.component';
+import { ChooseSizeComponent } from './choose-size/choose-size.component';
+import { MaterialComponent } from './material/material.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { AboutPageComponent } from './about-page/about-page.component';
     RegisterComponent,
     ShoppingCartComponent,
     MainPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    SupportComponent,
+    ChooseSizeComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
