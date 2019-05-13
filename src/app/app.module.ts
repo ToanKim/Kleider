@@ -14,6 +14,19 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
+const config = {
+  apiKey: 'AIzaSyD8E7lESXx4WbX7jukrfOBHeh8FqPZNyC4',
+  authDomain: 'kleider-db.firebaseapp.com',
+  databaseURL: 'https://kleider-db.firebaseio.com',
+  projectId: 'kleider-db',
+  storageBucket: 'kleider-db.appspot.com',
+  messagingSenderId: '675678034815'
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +43,9 @@ import { AboutPageComponent } from './about-page/about-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
