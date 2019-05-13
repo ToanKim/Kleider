@@ -5,14 +5,24 @@
     
     <div class="header-wrap-icon">
         <div class="search-container">
+<<<<<<< HEAD
             <form >
             <!-- <form #myform="ngForm" (ngSubmit)=""> -->
                 <input type="text" placeholder="Search.." name="search" #search>
                 <button type="submit" routerLink="search-result" (click)="sendSearch(search.value)" alt="search-icon" title="Search">
                     <i class="fa fa-search" routerLink="search-result"></i>
+=======
+            <label>
+            <!-- <form action="search-result"> -->
+            <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext">
+                <button type="submit" routerLink="search-result" (click)="sendSearch(search.value)" alt="search-icon" title="Search">
+                    <i class="fa fa-search" routerLink="search-result" (click)="sendSearch(search.value)"></i>
+>>>>>>> master
                 </button>
             </form>
-          </div>
+            </label>
+        </div>
 
         <a href="/cart">
             <img id="cart-icon" src="assets/images/shopping-cart.png" alt="cart-icon" title="Your cart">
