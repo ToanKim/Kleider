@@ -18,6 +18,19 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ServerServicesService } from './server-services.service';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+
+const config = {
+  apiKey: 'AIzaSyD8E7lESXx4WbX7jukrfOBHeh8FqPZNyC4',
+  authDomain: 'kleider-db.firebaseapp.com',
+  databaseURL: 'https://kleider-db.firebaseio.com',
+  projectId: 'kleider-db',
+  storageBucket: 'kleider-db.appspot.com',
+  messagingSenderId: '675678034815'
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +52,8 @@ import { ServerServicesService } from './server-services.service';
     AppRoutingModule,
     NgbModule.forRoot(),
     HttpClientModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule
   ],
   providers: [ServerServicesService],
   bootstrap: [AppComponent]
