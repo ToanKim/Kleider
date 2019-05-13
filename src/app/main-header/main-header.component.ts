@@ -12,6 +12,7 @@ export class MainHeaderComponent implements OnInit {
   constructor(private serverServices: ServerServicesService) { }
   value: string;
   ngOnInit() {
+    
   }
   sendSearch(text: string) : void {
     this.serverServices.setSearchValue(text);
@@ -21,6 +22,6 @@ export class MainHeaderComponent implements OnInit {
   });
 
   onSubmit() {
-    console.warn(this.searchForm.value);
+    console.log(this.searchForm.value);
   }
 }

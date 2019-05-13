@@ -11,6 +11,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/homepage', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'cart', component: ShoppingCartComponent},

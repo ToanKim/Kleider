@@ -13,7 +13,7 @@ export class ServerServicesService {
   private value: string;
 
   setSearchValue(text: string) : void {
-    if (text) {
+    if (typeof text != 'undefined' && text) {
       this.value = text;
     }
     else {

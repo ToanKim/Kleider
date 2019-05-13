@@ -2,6 +2,16 @@
     
 <ul>
     <li *ngFor="let p of product">
-        {{p.Name}}
+        <div *ngIf="p.Name.toLowerCase().includes(value.toLowerCase()) || p.PID==value; else unavailable">
+            <p>Name: {{p.Name}}</p>
+            <p>PID: {{p.PID}}</p>
+            <p>Price: {{p.Price}}</p>
+            <p>Size: {{p.Size}}</p>
+            <p *ngIf="p.Color">Color: {{p.Color}}</p>
+            <p *ngIf="p.Description">Description: {{p.Description}}</p>
+        </div>
     </li>
 </ul>
+<!-- <ng-template #unavailable>
+    <div>The product you are searching for is unavailable, please try again.</div>
+</ng-template> -->
