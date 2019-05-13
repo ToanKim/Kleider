@@ -16,7 +16,11 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-import { ServerServicesService } from './server-services.service';
+import { ServerServicesService } from 'src/app/server-services.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from './../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,9 @@ import { ServerServicesService } from './server-services.service';
     AppRoutingModule,
     NgbModule.forRoot(),
     HttpClientModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [ServerServicesService],
   bootstrap: [AppComponent]
