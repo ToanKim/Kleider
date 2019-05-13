@@ -5,10 +5,11 @@
     
     <div class="header-wrap-icon">
         <div class="search-container">
-            <form action="search-result">
+            <form >
+            <!-- <form #myform="ngForm" (ngSubmit)=""> -->
                 <input type="text" placeholder="Search.." name="search" #search>
-                <button type="submit" (click)="sendSearch(search.value)" alt="search-icon" title="Search">
-                    <i class="fa fa-search"></i>
+                <button type="submit" routerLink="search-result" (click)="sendSearch(search.value)" alt="search-icon" title="Search">
+                    <i class="fa fa-search" routerLink="search-result"></i>
                 </button>
             </form>
           </div>

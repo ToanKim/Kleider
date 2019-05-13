@@ -13,9 +13,10 @@ import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-import { ServerServicesService } from './server-services.service';
+import { ServerServicesService } from 'src/app/server-services.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,9 @@ import { ServerServicesService } from './server-services.service';
     ShoppingCartComponent,
     MainPageComponent,
     AboutPageComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    ProductInfoComponent,
+    AboutPageComponent
   ],
   imports: [
     BrowserModule,
