@@ -9,7 +9,6 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
 import { MaterialComponent } from './material/material.component';
-import { FeeComponent } from './fee/fee.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -19,8 +18,7 @@ const routes: Routes = [
   { path: 'about', component: AboutPageComponent},
   { path: 'support', component: SupportComponent},
   { path: 'choose-size', component: ChooseSizeComponent},
-  { path: 'material', component: MaterialComponent},
-  { path: 'fee', component: FeeComponent}
+  { path: 'material', component: MaterialComponent}
 ];
 
 @NgModule({

@@ -16,7 +16,6 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
 import { MaterialComponent } from './material/material.component';
-import { FeeComponent } from './fee/fee.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +31,7 @@ import { FeeComponent } from './fee/fee.component';
     AboutPageComponent,
     SupportComponent,
     ChooseSizeComponent,
-    MaterialComponent,
-    FeeComponent
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
