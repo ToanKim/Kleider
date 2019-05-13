@@ -8,17 +8,11 @@ import { ServerServicesService } from 'src/app/server-services.service';
 })
 export class SearchResultComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor(private serverServices: ServerServicesService) { }
-
-  value: string;
-=======
   constructor(private serverServices: ServerServicesService) {
 
   }
 
   private value: string;
->>>>>>> master
   ngOnInit() {
     this.value = this.serverServices.getSearchValue();
   }

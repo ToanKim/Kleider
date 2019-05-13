@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-=======
 import { AngularFireDatabase } from 'angularfire2/database';
->>>>>>> master
 
 @Component({
   selector: 'app-root',
@@ -10,10 +7,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
-<<<<<<< HEAD
-
-  constructor(){
-=======
   product: any[];
   constructor(db: AngularFireDatabase){
     db.list('Product').valueChanges()
@@ -21,6 +14,5 @@ export class AppComponent{
         {this.product = product;
           console.log(this.product);
         });
->>>>>>> master
   }
 }

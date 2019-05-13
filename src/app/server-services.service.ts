@@ -1,28 +1,12 @@
 import { Injectable } from '@angular/core';
-<<<<<<< HEAD
-// import { HttpClient } from 'selenium-webdriver/http';
-=======
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
->>>>>>> master
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServerServicesService {
 
-<<<<<<< HEAD
-  private value = '123s';
-
-  setSearchValue(text: string) : void {
-    if (text) {
-      this.value = text;
-      console.log(this.value);
-    }
-    else {
-      this.value = 'non-sense';
-      console.log(this.value);
-=======
   constructor(private http: HttpClient) {
 
   }
@@ -35,16 +19,11 @@ export class ServerServicesService {
     }
     else {
       this.value = 'non-sense';
->>>>>>> master
     }
   }
 
   getSearchValue() : string {
-<<<<<<< HEAD
-    console.log(this.value);
-=======
     // console.log(this.value);
->>>>>>> master
     return this.value;
   }
 
