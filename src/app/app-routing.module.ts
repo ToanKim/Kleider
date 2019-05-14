@@ -14,23 +14,16 @@ import { PastComponent } from './past/past.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './core/auth.guard';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
-<<<<<<< HEAD
   { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
   { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
-  { path: 'homepage', component: MainPageComponent},
-  { path: 'about', component: AboutPageComponent},
-  { path: 'search-result', component: SearchResultComponent},
   { path: 'pro-inf', component: ProductInfoComponent},
   { path: 'about', component: AboutPageComponent},
-  { path: 'customer', component: CustomerComponent}
-=======
-  { path: 'cart', component: ShoppingCartComponent},
-  { path: 'shipping', component: ShippingComponent},
+  { path: 'customer', component: CustomerComponent},
   { path: 'homepage', component: MainPageComponent},
-  { path: 'about', component: AboutPageComponent},
   { path: 'support', component: SupportComponent},
   { path: 'choose-size', component: ChooseSizeComponent},
   { path: 'material', component: MaterialComponent},
@@ -39,7 +32,6 @@ const routes: Routes = [
   { path: 'washing', component: WashingComponent},
   { path: 'past', component: PastComponent},
   { path: 'search-result', component: SearchResultComponent  }
->>>>>>> master
 ];
 
 @NgModule({
