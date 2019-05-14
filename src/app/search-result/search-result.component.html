@@ -1,0 +1,49 @@
+<p>Search result for "<strong>{{value}}</strong>"</p>
+
+<div *ngIf="itemIsEnable">
+    <ul>
+        <li *ngFor="let p of tmp; let i = index" class="listProduct">
+            <div class="imgLink">
+                <img src='{{imgLink[i]}}' class="imgLink">
+            </div>
+            <div class="productInfo">
+                <!-- <table>
+                    <tr>
+                        <th>Name:</th>
+                        <th>{{p.Name}}</th>
+                    </tr>
+                    <tr>
+                        <th>PID:</th>
+                        <th>{{p.PID}}</th>
+                    </tr>
+                    <tr>
+                        <th>Size:</th>
+                        <th>{{p.Size}}</th>
+                    </tr>
+                    <tr>
+                        <th>Name:</th>
+                        <th>{{p.Name}}</th>
+                    </tr>
+                    <tr *ngIf="p.Color">
+                        <th>Color:</th>
+                        <th>{{p.Color}}</th>
+                    </tr>
+                    <tr *ngIf="p.Description">
+                        <th>Description:</th>
+                        <th>{{p.Description}}</th>
+                    </tr>
+                </table> -->
+                <p>Name: {{p.Name}}</p>
+                <p>PID: {{p.PID}}</p>
+                <p>Price: {{p.Price}}</p>
+                <p>Size: {{p.Size}}</p>
+                <p *ngIf="p.Color">Color: {{p.Color}}</p>
+                <p *ngIf="p.Description">Description: {{p.Description}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- <div *ngIf="!itemIsEnable">
+    <p>The product you are searching for is unavailable, please try again.</p>
+</div> -->

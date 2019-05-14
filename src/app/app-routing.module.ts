@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -13,20 +11,27 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+import { CustomerComponent } from './customer/customer.component';
+import { AuthGuard } from './core/auth.guard';
+import { ProductInfoComponent } from './product-info/product-info.component';
+
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'cart', component: ShoppingCartComponent},
-  { path: 'shipping', component: ShippingComponent},
-  { path: 'homepage', component: MainPageComponent},
+  { path: '', redirectTo: '/homepage', pathMatch: 'full'},
+  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
+  { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
+  { path: 'pro-inf', component: ProductInfoComponent},
   { path: 'about', component: AboutPageComponent},
+  { path: 'customer', component: CustomerComponent},
+  { path: 'homepage', component: MainPageComponent},
   { path: 'support', component: SupportComponent},
   { path: 'choose-size', component: ChooseSizeComponent},
   { path: 'material', component: MaterialComponent},
   { path: 'fee', component: FeeComponent},
   { path: 'receive', component: ReceiveComponent},
   { path: 'washing', component: WashingComponent},
-  { path: 'past', component: PastComponent}
+  { path: 'past', component: PastComponent},
+  { path: 'search-result', component: SearchResultComponent  }
 ];
 
 @NgModule({

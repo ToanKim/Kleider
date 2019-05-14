@@ -1,0 +1,1 @@
+<? php echo "search-result.php" ?>

@@ -19,7 +19,7 @@
     <div id="bottom-right-container">
       <div id="info-container">
         <div class="textbox">
-          <h3>Distance</h3><h4>{{ distance }} km</h4>
+          <h3>Distance</h3><h4>{{ distance/1000 | number:'1.0-2'}} km</h4>
         </div>
         <div class="textbox">
           <h3>Cost</h3>
@@ -27,17 +27,17 @@
         </div>
         <div class="textbox">
           <h3>Total</h3>
-          <h4>{{ total }} VND</h4>
+          <h4>{{ total + cost }} VND</h4>
         </div>
-        <div class="textbox" ng-app="myApp" ng-controller="datCtrl">
+        <div class="textbox">
           <h3>Date</h3>
-          <h4>{{myDate | date:'dd/MM/yyyy'}}</h4>
+          <h4>{{ shippingDate | date:'dd/MM/yyyy' }}</h4>
         </div>
       </div>
   
       <div id="navigation-container">
-        <button type="submit" id="back-nav">BACK</button>
-        <button type="submit" id="confirm-nav">CONFIRM</button>
+        <button type="submit" class="button" (click)="backNav()" id="back-nav">BACK</button>
+        <button type="submit" class="button" (click)="confirmNav()" id="confirm-nav">CONFIRM</button>
       </div>
     </div>
     

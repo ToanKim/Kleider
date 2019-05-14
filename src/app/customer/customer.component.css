@@ -1,0 +1,44 @@
+h1{
+    padding-top: 0.5em;
+    display: block;
+    height: 200px;
+    border-top: 0.5px dotted;
+    border-bottom: 0.5px dotted;
+    text-align: center;
+}
+hr{
+    width: 60px;
+    margin-left: 750px;
+    /* align-content: center; */
+    /* height: 200px; */
+}
+
+.row{
+    /* display: inline; */
+    display: flex;
+    flex-direction: row;
+}
+
+.account{
+    margin-top: 10px;
+    width: 20%;
+    padding-left: 3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-right: solid 5px;
+}
+
+li{
+    margin-left: 2em;
+}
+
+.nav{
+    margin-top: 10px;
+}
+
+.infor{
+    margin-top: 10px;
+    padding-left: 1em;
+    width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
