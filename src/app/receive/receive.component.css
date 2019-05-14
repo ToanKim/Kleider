@@ -1,0 +1,15 @@
+* {
+    margin-right: 10% 
+}
+h1, p, img {
+    margin-left: 22%;
+}
+
+h1 {
+    font-style: italic;
+}
+
+p {
+    font-size: larger;
+    line-height: 1.5
+}

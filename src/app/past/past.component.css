@@ -1,0 +1,16 @@
+h1, p, li, img {
+    margin-right: 10% 
+}
+h1, ul, img, p {
+    margin-left: 22%;
+}
+
+h1 {
+    font-style: italic;
+}
+
+ul, p {
+    font-size: larger;
+    line-height: 1.5;
+    list-style-type: circle;
+}
