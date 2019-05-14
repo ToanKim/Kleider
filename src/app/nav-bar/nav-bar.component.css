@@ -26,7 +26,6 @@
     color: lightblue;
 }
 
-
 /* Drop down menu */
 .nav-bar-item > .dropdown {
     list-style-type: none;
@@ -45,7 +44,7 @@
     padding-top: 10px;
 }
 
-.nav-bar-item:hover > .dropdown > li {
+.nav-bar-item:hover > .dropdown > li { 
     display: block;
     padding: 10px;
     text-align: center;
