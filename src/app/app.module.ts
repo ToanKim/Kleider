@@ -12,6 +12,13 @@ import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
+import {CustomerComponent} from './customer/customer.component'
+
+//database
+import {AngularFireModule} from 'angularfire2';
+import {environment} from './../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -23,12 +30,16 @@ import { MainPageComponent } from './main-page/main-page.component';
     LoginComponent,
     RegisterComponent,
     ShoppingCartComponent,
-    MainPageComponent
+    MainPageComponent,
+    AboutPageComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
