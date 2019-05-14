@@ -3,15 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { SupportComponent } from './support/support.component';
+import { ChooseSizeComponent } from './choose-size/choose-size.component';
+import { MaterialComponent } from './material/material.component';
+import { FeeComponent } from './fee/fee.component';
+import { ReceiveComponent } from './receive/receive.component';
+import { WashingComponent } from './washing/washing.component';
+import { PastComponent } from './past/past.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './core/auth.guard';
 
-
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
+<<<<<<< HEAD
   { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
   { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
   { path: 'homepage', component: MainPageComponent},
@@ -20,6 +26,20 @@ const routes: Routes = [
   { path: 'pro-inf', component: ProductInfoComponent},
   { path: 'about', component: AboutPageComponent},
   { path: 'customer', component: CustomerComponent}
+=======
+  { path: 'cart', component: ShoppingCartComponent},
+  { path: 'shipping', component: ShippingComponent},
+  { path: 'homepage', component: MainPageComponent},
+  { path: 'about', component: AboutPageComponent},
+  { path: 'support', component: SupportComponent},
+  { path: 'choose-size', component: ChooseSizeComponent},
+  { path: 'material', component: MaterialComponent},
+  { path: 'fee', component: FeeComponent},
+  { path: 'receive', component: ReceiveComponent},
+  { path: 'washing', component: WashingComponent},
+  { path: 'past', component: PastComponent},
+  { path: 'search-result', component: SearchResultComponent  }
+>>>>>>> master
 ];
 
 @NgModule({

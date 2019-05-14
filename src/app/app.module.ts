@@ -13,10 +13,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
-
-import { ServerServicesService } from './server-services.service';
 
 
 import { AngularFireModule } from '@angular/fire';
@@ -27,7 +24,19 @@ import { AuthService } from './core/auth.service';
 
 import { FormsModule } from '@angular/forms';
 
+import { SearchResultComponent } from './search-result/search-result.component';
+import { ServerServicesService } from 'src/app/server-services.service';
 
+// import { AngularFireModule } from 'angularfire2';
+// import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+import { SupportComponent } from './support/support.component';
+import { ChooseSizeComponent } from './choose-size/choose-size.component';
+import { MaterialComponent } from './material/material.component';
+import { FeeComponent } from './fee/fee.component';
+import { ReceiveComponent } from './receive/receive.component';
+import { WashingComponent } from './washing/washing.component';
+import { PastComponent } from './past/past.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,10 +47,19 @@ import { FormsModule } from '@angular/forms';
     ShoppingCartComponent,
     MainPageComponent,
     AboutPageComponent,
+
     SearchResultComponent,
     ProductInfoComponent,
     AboutPageComponent,
     CustomerComponent,
+
+    SupportComponent,
+    ChooseSizeComponent,
+    MaterialComponent,
+    FeeComponent,
+    ReceiveComponent,
+    WashingComponent,
+    PastComponent
   ],
   imports: [
     BrowserModule,
