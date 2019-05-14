@@ -2,7 +2,7 @@
     <div class="pro-loop"> 
         <div class="product1">
             <div class="pro-img">
-                <img src = "assets/images/dontcry.png" title="real men dont cry" style="height: 300px;">
+                <img src = "assets/images/1.png" title="real men dont cry" style="height: 300px;">
             </div>
             <div class="pro-detail">
                     <div class="box-pro-detail">
@@ -14,7 +14,7 @@
                               <br>
                           <div id = "sublist">{{Product[0].Price}}₫</div>
                       
-                            <button> Add to cart</button>
+                            <button class="button" (click)="addtoCart()"> Add to cart</button>
                           </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
     <div class="pro-loop">
         <div class="product2">
             <div class="pro-img">
-                <img src = "assets/images/Vintage.png" title="Vintage" style="height:300px"> 
+                <img src = "assets/images/2.png" title="Vintage" style="height:300px"> 
             </div>
             <div class="pro-detail">
                     <div class="box-pro-detail">
@@ -47,7 +47,7 @@
     <div class="pro-loop">
             <div class="product3">
                 <div class="pro-img">
-                    <img src = "assets/images/marvel.png" title="Marvel Studios" style="height:300px"> 
+                    <img src = "assets/images/3.png" title="Marvel Studios" style="height:300px"> 
                 </div>
                 <div class="pro-detail">
                     <div class="pro-detail">
@@ -66,7 +66,7 @@
     <div class="pro-loop">
             <div class="product4">
                 <div class="pro-img">
-                    <img src = "assets/images/hotter.png" title="Hotter Ex" style="height:300px"> 
+                    <img src = "assets/images/4.png" title="Hotter Ex" style="height:300px"> 
                 </div>
                 <div class="pro-detail">
                     <div class="pro-detail">
@@ -82,27 +82,29 @@
         </div>
     </div>
   
-    <div class="pro-loop">
-            <div class="product5">
-                <div class="pro-img">
-                    <img src = "assets/images/what.png" title="Do what u want" style="height:300px"> 
-                </div>
-                <div class="pro-detail">
-                    <div class="pro-detail">
-                        <h3 class="pro-name">
-                            <a href="assets/images/what" title="Do what u want"></a>
-                        </h3>
-                        {{Product[4].Name}}
-                        <br>
-                        <div id = "sublist">{{Product[4].Price}}₫</div>
-                    <button> Add to cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
   </div>
   
   <div class="container">
+
+        <div class="pro-loop">
+                <div class="product5">
+                    <div class="pro-img">
+                        <img src = "assets/images/what.png" title="Do what u want" style="height:300px"> 
+                    </div>
+                    <div class="pro-detail">
+                        <div class="pro-detail">
+                            <h3 class="pro-name">
+                                <a href="assets/images/what" title="Do what u want"></a>
+                            </h3>
+                            {{Product[4].Name}}
+                            <br>
+                            <div id = "sublist">{{Product[4].Price}}₫</div>
+                        <button> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="pro-loop">
             <div class="product5">
                 <div class="pro-img">
