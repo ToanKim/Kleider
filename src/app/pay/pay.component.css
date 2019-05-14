@@ -1,0 +1,15 @@
+* {
+    margin-right: 10% 
+}
+h1, ul{
+    margin-left: 22%;
+}
+
+h1 {
+    font-style: italic;
+}
+
+ul {
+    font-size: larger;
+    line-height: 1.5
+}

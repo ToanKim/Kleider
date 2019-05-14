@@ -34,7 +34,10 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { PayComponent } from './pay/pay.component';
+import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +60,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     FeeComponent,
     ReceiveComponent,
     WashingComponent,
-    PastComponent
+    PastComponent,
+    PayComponent,
+    ShoppingGuideComponent,
   ],
   imports: [
     BrowserModule,
