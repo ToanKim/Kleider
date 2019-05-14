@@ -7,11 +7,12 @@ import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
+import { AuthGuard } from './core/auth.guard';
 
 
 const routes: Routes = [
-  { path: 'cart', component: ShoppingCartComponent},
-  { path: 'shipping', component: ShippingComponent},
+  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
+  { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
   { path: 'homepage', component: MainPageComponent},
   { path: 'about', component: AboutPageComponent},
   { path: 'search-result', component: SearchResultComponent},
