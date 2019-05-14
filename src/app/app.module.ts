@@ -36,6 +36,7 @@ import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
 import { PayComponent } from './pay/pay.component';
 import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.component';
+import { BankComponent } from './bank/bank.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
@@ -63,6 +64,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     PastComponent,
     PayComponent,
     ShoppingGuideComponent,
+    BankComponent
   ],
   imports: [
     BrowserModule,

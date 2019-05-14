@@ -13,6 +13,7 @@ import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
 import { PayComponent } from './pay/pay.component';
 import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.component';
+import { BankComponent } from './bank/bank.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './core/auth.guard';
@@ -35,8 +36,8 @@ const routes: Routes = [
   { path: 'past', component: PastComponent},
   { path: 'search-result', component: SearchResultComponent  },
   { path: 'pay', component: PayComponent  },
-  { path: 'shopping-guide', component: ShoppingGuideComponent  }
-
+  { path: 'shopping-guide', component: ShoppingGuideComponent  },
+  { path: 'bank', component: BankComponent  }
 ];
 
 @NgModule({
