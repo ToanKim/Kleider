@@ -17,7 +17,9 @@ import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
 import { MaterialComponent } from './material/material.component';
 import { FeeComponent } from './fee/fee.component';
-
+import { ReceiveComponent } from './receive/receive.component';
+import { WashingComponent } from './washing/washing.component';
+import { PastComponent } from './past/past.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,10 @@ import { FeeComponent } from './fee/fee.component';
     SupportComponent,
     ChooseSizeComponent,
     MaterialComponent,
-    FeeComponent
+    FeeComponent,
+    ReceiveComponent,
+    WashingComponent,
+    PastComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,9 @@ import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
 import { MaterialComponent } from './material/material.component';
 import { FeeComponent } from './fee/fee.component';
+import { ReceiveComponent } from './receive/receive.component';
+import { WashingComponent } from './washing/washing.component';
+import { PastComponent } from './past/past.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
@@ -20,7 +23,10 @@ const routes: Routes = [
   { path: 'support', component: SupportComponent},
   { path: 'choose-size', component: ChooseSizeComponent},
   { path: 'material', component: MaterialComponent},
-  { path: 'fee', component: FeeComponent}
+  { path: 'fee', component: FeeComponent},
+  { path: 'receive', component: ReceiveComponent},
+  { path: 'washing', component: WashingComponent},
+  { path: 'past', component: PastComponent}
 ];
 
 @NgModule({
