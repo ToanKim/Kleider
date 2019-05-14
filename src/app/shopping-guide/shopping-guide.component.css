@@ -1,0 +1,19 @@
+/* * {
+    margin-right: 10% 
+} */
+h1, p{
+    margin-left: 22%;
+}
+
+ul {
+    margin-left: 25%;
+}
+
+h1 {
+    font-style: italic;
+}
+
+ul, p {
+    font-size: larger;
+    line-height: 1.5
+}
