@@ -15,6 +15,12 @@ import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
+=======
+  { path: '', redirectTo: '/homepage', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+>>>>>>> 4a55bc45d1136640c1f655eb397bec9d98b31904
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'shipping', component: ShippingComponent},
   { path: 'homepage', component: MainPageComponent},

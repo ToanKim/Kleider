@@ -1,20 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServerServicesService {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private router: Router) {
 
   }
 
   private value: string;
 
   setSearchValue(text: string) : void {
-    if (text) {
+    if (typeof text != 'undefined' && text) {
       this.value = text;
+      // this.router.navigate(['search-result'],{replaceUrl:true});
+      // console.log(this.router.navigate(['search-result'],{replaceUrl:true}));
     }
     else {
       this.value = 'non-sense';
