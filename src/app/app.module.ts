@@ -22,13 +22,10 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './core/auth.service';
 
-import { FormsModule } from '@angular/forms';
-
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ServerServicesService } from 'src/app/server-services.service';
 
-// import { AngularFireModule } from 'angularfire2';
-// import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
@@ -37,6 +34,7 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,8 +68,9 @@ import { PastComponent } from './past/past.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
-
-    FormsModule,
+    AngularFireDatabaseModule,
+    
+    ReactiveFormsModule,
   ],
   providers: [
     ServerServicesService,

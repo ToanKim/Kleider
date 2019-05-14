@@ -26,16 +26,6 @@ export class AuthService {
     private afs: AngularFirestore,
     private router: Router
   ) {
-    // this.afAuth.authState.pipe(
-    //   switchMap( user => {
-    //     if (user) {
-    //       return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
-    //     } else {
-    //       return of(null);
-    //     }
-
-    //   })
-    // );
 
     this.afAuth.authState.subscribe( user => {
       if (user) {
@@ -48,31 +38,6 @@ export class AuthService {
       }
     });
   }
-
-  // async googleSignIn() {
-  //   const provider = new auth.GoogleAuthProvider();
-  //   const credential = await this.afAuth.auth.signInWithPopup(provider);
-  //   this.updateUserData(credential.user);
-  //   return this.router.navigate(['/homepage']);
-  // }
-
-  // async signOut() {
-  //   await this.afAuth.auth.signOut();
-  //   return this.router.navigate(['/homepage']);
-  // }
-
-  // private updateUserData(user) {
-  //   const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
-
-  //   const data = {
-  //     uid: user.uid,
-  //     email: user.email,
-  //     displayName: user.displayName,
-  //     photoURL: user.photoURL
-  //   };
-
-  //   return userRef.set(data, { merge: true});
-  // }
 
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
