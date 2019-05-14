@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerServicesService } from 'src/app/server-services.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-main-header',
@@ -9,13 +11,23 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor(private serverServices: ServerServicesService) { }
+  constructor(private serverServices: ServerServicesService,
+              private router: Router,
+              private location: Location) { }
   value: string;
   ngOnInit() {
     
   }
   sendSearch(text: string) : void {
-    this.serverServices.setSearchValue(text);
+    if (text) {
+      this.serverServices.setSearchValue(text.trim());
+
+      this.router.navigateByUrl(
+        '/homepage',
+        {skipLocationChange: true}).then(()=>
+          this.router.navigate(['/search-result'])
+      );
+    }
   }
   searchForm = new FormGroup({
     searchtext : new FormControl(''),

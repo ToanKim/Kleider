@@ -30,11 +30,11 @@ const routes: Routes = [
   { path: 'receive', component: ReceiveComponent},
   { path: 'washing', component: WashingComponent},
   { path: 'past', component: PastComponent},
-  { path: 'search-result', component: SearchResultComponent  }
+  { path: 'search-result', component: SearchResultComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
