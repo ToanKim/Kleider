@@ -15,12 +15,15 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ServerServicesService } from 'src/app/server-services.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from './../environments/environment';
+
+
 
 @NgModule({
   declarations: [
@@ -34,9 +37,11 @@ import { environment } from './../environments/environment';
     ShoppingCartComponent,
     MainPageComponent,
     AboutPageComponent,
+
     SearchResultComponent,
     ProductInfoComponent,
     AboutPageComponent
+
   ],
   imports: [
     BrowserModule,
