@@ -16,34 +16,8 @@ export class MainPageComponent  {
   constructor(db: AngularFireDatabase){
 
     //product
-    db.list('/Vu-test/product1').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      console.log(this.Product[0]);
-    })
-
     db.list('/Vu-test').valueChanges().subscribe(Product => {
       this.Product = Product;
-      console.log(this.Product[1]);
-    })
-
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      console.log(this.Product[2]);
-    })
-
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      console.log(this.Product[3]);
-    })
-
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      console.log(this.Product[4]);
-    })
-
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      console.log(this.Product[5]);
-    })
+    });
   }
 }

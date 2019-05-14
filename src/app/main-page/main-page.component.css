@@ -30,7 +30,7 @@
 
 .list{
     padding-left: 3em;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 #sublist{
