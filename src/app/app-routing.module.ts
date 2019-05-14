@@ -13,6 +13,8 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { SearchResultComponent } from './search-result/search-result.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
@@ -27,7 +29,8 @@ const routes: Routes = [
   { path: 'fee', component: FeeComponent},
   { path: 'receive', component: ReceiveComponent},
   { path: 'washing', component: WashingComponent},
-  { path: 'past', component: PastComponent}
+  { path: 'past', component: PastComponent},
+  { path: 'search-result', component: SearchResultComponent  }
 ];
 
 @NgModule({
