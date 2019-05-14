@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { MainPageComponent } from './main-page/main-page.component';
@@ -13,14 +11,10 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
-=======
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
->>>>>>> 4a55bc45d1136640c1f655eb397bec9d98b31904
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'shipping', component: ShippingComponent},
   { path: 'homepage', component: MainPageComponent},
@@ -31,7 +25,8 @@ const routes: Routes = [
   { path: 'fee', component: FeeComponent},
   { path: 'receive', component: ReceiveComponent},
   { path: 'washing', component: WashingComponent},
-  { path: 'past', component: PastComponent}
+  { path: 'past', component: PastComponent},
+  { path: 'search-result', component: SearchResultComponent  }
 ];
 
 @NgModule({
