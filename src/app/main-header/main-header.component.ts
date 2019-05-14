@@ -22,6 +22,8 @@ export class MainHeaderComponent implements OnInit {
   });
 
   onSubmit() {
-    console.log(this.searchForm.value);
+    // console.log("this.searchForm: ", this.searchForm);
+    // console.log("this.searchForm.value: ", this.searchForm.value);
+    // console.log("this.searchForm.value.searchtext: ", this.searchForm.value.searchtext);
   }
 }
