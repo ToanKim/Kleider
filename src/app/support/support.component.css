@@ -12,7 +12,7 @@
 #right-container {
     flex: 50%;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 /* Left container */
@@ -32,7 +32,7 @@
 
 #right-container #right-box {
     height: 60%;
-    width: 60%;
+    width: 80%;
     margin-left: 15%;
 }
 
