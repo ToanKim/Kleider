@@ -4,7 +4,6 @@
     padding: 10px 0 0 0;
     width: 80%;
     margin-left: 10%;
-
     display: flex;
     justify-content: space-between;
 }
@@ -34,17 +33,14 @@
     background: white;
 }
 
-.nav-bar-item > .dropdown {
-    position: absolute;
-}
+/*  */
 
-.nav-bar-item > .dropdown > li{
-    position: relative;
+.nav-bar-item > .dropdown {
     display: none;
     padding-top: 10px;
 }
 
-.nav-bar-item:hover > .dropdown > li { 
+.nav-bar-item:hover > .dropdown { 
     display: block;
     padding: 10px;
     text-align: center;
