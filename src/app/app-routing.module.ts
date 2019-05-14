@@ -13,9 +13,8 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
   { path: 'cart', component: ShoppingCartComponent},
   { path: 'shipping', component: ShippingComponent},
   { path: 'homepage', component: MainPageComponent},
