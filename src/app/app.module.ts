@@ -22,9 +22,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from './../environments/environment';
-
-
-
+import { SupportComponent } from './support/support.component';
+import { ChooseSizeComponent } from './choose-size/choose-size.component';
+import { MaterialComponent } from './material/material.component';
+import { FeeComponent } from './fee/fee.component';
+import { ReceiveComponent } from './receive/receive.component';
+import { WashingComponent } from './washing/washing.component';
+import { PastComponent } from './past/past.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,8 +44,15 @@ import { environment } from './../environments/environment';
 
     SearchResultComponent,
     ProductInfoComponent,
-    AboutPageComponent
+    AboutPageComponent,
 
+    SupportComponent,
+    ChooseSizeComponent,
+    MaterialComponent,
+    FeeComponent,
+    ReceiveComponent,
+    WashingComponent,
+    PastComponent
   ],
   imports: [
     BrowserModule,
