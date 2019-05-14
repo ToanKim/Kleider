@@ -11,13 +11,6 @@ export const environment = {
     projectId: 'kleider-2f5b6',
     storageBucket: 'kleider-2f5b6.appspot.com',
     messagingSenderId: '129498300728'
-<<<<<<< HEAD
-  },
-
-  mapbox: {
-    accessToken: 'pk.eyJ1Ijoia2ltdG9hbjE5OTgiLCJhIjoiY2p2bmFuY2g0MWw5NjQzbXVsdnFhdm8xMiJ9.wFCCmFNXo5Nk6nTQexMyvQ'
-=======
->>>>>>> master
   }
 };
 
