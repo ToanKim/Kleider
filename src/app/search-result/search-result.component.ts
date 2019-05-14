@@ -63,9 +63,7 @@ export class SearchResultComponent implements OnInit {
   imgLink: any[] = [];
 
   constructor(private db: AngularFireDatabase,
-              private serverServices: ServerServicesService){
-
-  }
+              private serverServices: ServerServicesService){}
   
   ngOnInit() {
     // this.product = [];

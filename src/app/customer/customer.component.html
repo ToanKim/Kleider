@@ -1,16 +1,25 @@
-<h1> Your Account <hr /> </h1>
-<div class="row">
-    <div class="account">
-        <h4>Account</h4>
-        <ul>
-            <li> <a href="/login">Account Information</a></li>
-            <li>Sign out</li>
-        </ul>
+<div *ngIf="auth.isLoggedIn; else login">
+    <h1> Your Profile<hr /> </h1>
+    <div class="row">
+        <div class="account">
+            <h4>Account</h4>
+            <ul>
+                <li>Account Information</li>
+            </ul>
+            <button class="button" (click)="auth.signOut()">Sign Out</button>
+        </div>
+        <div class="infor">
+            <h4>Account Information</h4>
+            <p>{{ auth.userData.displayName }}</p>
+            <p>{{ auth.userData.email }}</p>
+        </div>
     </div>
-    <div class="infor">
-        <h4>Account Information</h4>
-        <p>Võ Huy</p>
-        <p>email@gmail.com</p>
-        <p>See address </p>
-    </div>
+    
 </div>
+
+
+<ng-template #login>
+    <h1>You are not logged in</h1>
+    <button class="button" (click)="auth.googleSignIn()">Log In With Google</button>
+</ng-template>
+
