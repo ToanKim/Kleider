@@ -16,7 +16,7 @@ export class ServerServicesService {
 
   sendSearchText_(text: string): Observable<string> {
     this.value = text;
-    return this.http.post('search-result', text, {responseType:'text'})
+    return this.http.post('search-result', text, {responseType: 'text'})
   };
 
   sendSearchText(text: string): Observable<string> {

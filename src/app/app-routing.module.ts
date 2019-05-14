@@ -11,6 +11,7 @@ import { AuthGuard } from './core/auth.guard';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/homepage', pathMatch: 'full'},
   { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
   { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
   { path: 'homepage', component: MainPageComponent},

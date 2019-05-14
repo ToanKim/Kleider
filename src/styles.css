@@ -2,10 +2,8 @@
 
 * {
     margin: 0;
-    padding: 0;
     border: 0;
     font-family: 'Quicksand', sans-serif ;
-    box-sizing: border-box;
 }
 
 @font-face {
@@ -13,10 +11,10 @@
     src: url(assets/fonts/BrigestScript.ttf) format("truetype");
 }
 
-
+/* 
 input, button {
     margin: 0;
-}
+} */
 
 button {
     text-align: center;
