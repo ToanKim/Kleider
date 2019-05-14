@@ -35,14 +35,20 @@
     background: white;
 }
 
+.nav-bar-item > .dropdown {
+    position: absolute;
+}
+
 .nav-bar-item > .dropdown > li{
+    position: relative;
     display: none;
     padding-top: 10px;
 }
 
 .nav-bar-item:hover > .dropdown > li {
     display: block;
-
+    padding: 10px;
+    text-align: center;
 }
 
 .nav-bar-item > .dropdown > li > a {
