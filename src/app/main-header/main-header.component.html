@@ -6,7 +6,7 @@
     <div class="header-wrap-icon">
         <div class="search-container">
             <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" maxlength="40">
+                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" required>
                 <button type="submit" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)" alt="search-icon" title="Search">
                     <i class="fa fa-search" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)"></i>
                 </button>
@@ -24,3 +24,16 @@
     </div>
     
 </div>
+
+<!-- <div *ngIf="searchtext.invalid && (searchtext.dirty || searchtext.touched)" class="alert alert-danger">
+    <div *ngIf="searchtext.error.required">
+        <p onload="required()">Input is required.</p>
+    </div>
+    <div *ngIf="searchtext.error.maxlength" id="maxlength">
+        <p onload="maxlength()">Input must less than 3 characters long.</p>
+    </div>
+</div>
+<script>
+    function required() { alert("Input is required"); }
+    function maxlength() { alert("Input must less than 3 characters long.")}
+</script> -->
