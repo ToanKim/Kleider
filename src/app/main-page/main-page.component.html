@@ -1,165 +1,117 @@
 <div class = "container">
-  <div class="pro-loop"> 
-      <div class="product1">
-          <div class="pro-img">
-              <img src = "assets/images/2.png" title="real men dont cry" style="height: 300px;">
-          </div>
-          <div class="pro-detail">
-                  <div class="box-pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/2" title="REAL MEN DON'T CRY">
-                              REAL MEN DON'T CRY
-                          </a>
-                      </h3>
-                      <div class="box-pro-prices">	
-                          <p class="pro-price ">250,000₫
-                              <span class="pro-price-del"></span>
-                          </p>
-                          <button> Add to cart</button>
-                      </div>
-                  </div>
-              </div>
-      </div>
-  </div>
-
-  <div class="pro-loop">
-      <div class="product2">
-          <div class="pro-img">
-              <img src = "assets/images/1.png" title="Vintage" style="height:300px"> 
-          </div>
-          <div class="pro-detail">
-                  <div class="box-pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/1" title="Vintage Saigonese">
-                              Vintage Saigonese
-                          </a>
-                      </h3>
-                      <div class="box-pro-prices">	
-                          <p class="pro-price ">150,000₫
-                              <span class="pro-price-del"></span>
-                          </p>
-                          <button> Add to cart</button>
-                      </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="pro-loop">
-          <div class="product3">
-              <div class="pro-img">
-                  <img src = "assets/images/3.png" title="Marvel Studios" style="height:300px"> 
-              </div>
-              <div class="pro-detail">
-                  <div class="pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/3" title="Marvel Studios">
-                                  Marvel Studios
-                          </a>
-                      </h3>
-                  <div class="box-pro-prices">	
-                      <p class="pro-price ">350,000₫
-                          <span class="pro-price-del"></span>
-                      </p>
-                      <button> Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="pro-loop">
-          <div class="product4">
-              <div class="pro-img">
-                  <img src = "assets/images/4.png" title="Hotter Ex" style="height:300px"> 
-              </div>
-              <div class="pro-detail">
-                  <div class="pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/4" title="Hotter Ex">
-                                  Hotter Ur Ex
-                          </a>
-                      </h3>
-                  <div class="box-pro-prices">	
-                      <p class="pro-price ">550,000₫
-                          <span class="pro-price-del"></span>
-                      </p>
-                      <button> Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="pro-loop">
-          <div class="product5">
-              <div class="pro-img">
-                  <img src = "assets/images/5.png" title="Do what u want" style="height:300px"> 
-              </div>
-              <div class="pro-detail">
-                  <div class="pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/5" title="Do what u want">
-                              Do what u want
-                          </a>
-                      </h3>
-                  <div class="box-pro-prices">	
-                      <p class="pro-price ">750,000₫
-                          <span class="pro-price-del"></span>
-                      </p>
-                      <button> Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="pro-loop"> 
+        <div class="product1">
+            <div class="pro-img">
+                <img src = "assets/images/1.png" title="real men dont cry" style="height: 300px;">
+            </div>
+            <div class="pro-detail">
+                <div class="box-pro-detail">
+                    <div class="list">
+                        {{Product[0].Name}} <br />
+                        <div id = "sublist">{{Product[0].Price}}₫</div>
+                        
+                        <button class="button" (click)="addtoCart()"> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div class="pro-loop">
+        <div class="product2">
+            <div class="pro-img">
+                <img src = "assets/images/2.png" title="Vintage" style="height:300px"> 
+            </div>
+            <div class="pro-detail">
+                <div class="box-pro-detail">
+                    <div class="list">
+                        {{Product[1].Name}}<br/>
+                        <div id = "sublist">{{Product[1].Price}}₫</div>
+                        <button> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div class="pro-loop">
+        <div class="product3">
+            <div class="pro-img">
+                <img src = "assets/images/3.png" title="Marvel Studios" style="height:300px"> 
+            </div>
+            <div class="pro-detail">
+                <div class="pro-detail">
+                    {{Product[2].Name}}<br />
+                    <div id = "sublist">{{Product[2].Price}}₫</div>
+                    <button> Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    <div class="pro-loop">
+        <div class="product4">
+            <div class="pro-img">
+                <img src = "assets/images/4.png" title="Hotter Ex" style="height:300px"> 
+            </div>
+            <div class="pro-detail">
+                <div class="pro-detail">
+                    {{Product[3].Name}}<br>
+                    <div id = "sublist">{{Product[3].Price}}₫</div>
+                    <button> Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div class="container">
-  <div class="pro-loop">
-          <div class="product5">
-              <div class="pro-img">
-                  <img src = "assets/images/6.png" title="Monalisa" style="height:300px"> 
-              </div>
-              <div class="pro-detail">
-                  <div class="pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/6" title="Monalisa">
-                              Monday Lisa
-                          </a>
-                      </h3>
-                  <div class="box-pro-prices">	
-                      <p class="pro-price ">650,000₫
-                          <span class="pro-price-del"></span>
-                      </p>
-                      <button> Add to cart</button>
-                  </div>
-              </div>
-          </div>
+      
+      <div class="container">
+    
+            <div class="pro-loop">
+                    <div class="product5">
+                        <div class="pro-img">
+                            <img src = "assets/images/5.png" title="Do what u want" style="height:300px"> 
+                        </div>
+                        <div class="pro-detail">
+                            <div class="pro-detail">
+                                {{Product[4].Name}}
+                                <br>
+                                <div id = "sublist">{{Product[4].Price}}₫</div>
+                            <button> Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="pro-loop">
+                <div class="product6">
+                    <div class="pro-img">
+                        <img src = "assets/images/6.png" title="Monalisa" style="height:300px"> 
+                    </div>
+                    <div class="pro-detail">
+                        <div class="pro-detail">
+                              {{Product[5].Name}}
+                              <br>
+                              <div id = "sublist">{{Product[5].Price}}₫</div>
+                              <button> Add to cart</button>
+                           </div>
+                      </div>
+            </div>
+        </div>
+      
+        <div class="pro-loop">
+                <div class="product7">
+                    <div class="pro-img">
+                        <img src = "assets/images/7.png" title="Thanos hand" style="height:300px"> 
+                    </div>
+                    <div class="pro-detail">
+                        <div class="pro-detail">
+                            {{Product[6].Name}}
+                            <br>
+                            <div id = "sublist">{{Product[6].Price}}₫</div>
+                        <button> Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
       </div>
-  </div>
-
-  <div class="pro-loop">
-          <div class="product6">
-              <div class="pro-img">
-                  <img src = "assets/images/7.png" title="Thanos hand" style="height:300px"> 
-              </div>
-              <div class="pro-detail">
-                  <div class="pro-detail">
-                      <h3 class="pro-name">
-                          <a href="assets/images/7" title="Thanos hand">
-                              Thanos hand
-                          </a>
-                      </h3>
-                  <div class="box-pro-prices">	
-                      <p class="pro-price ">450,000₫
-                          <span class="pro-price-del"></span>
-                      </p>
-                      <button> Add to cart</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-</div>

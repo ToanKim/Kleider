@@ -15,6 +15,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './core/auth.guard';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'receive', component: ReceiveComponent},
   { path: 'washing', component: WashingComponent},
   { path: 'past', component: PastComponent},
-  { path: 'search-result', component: SearchResultComponent}
+  { path: 'search-result', component: SearchResultComponent},
+  { path: 'search-result/unavailable', component: UnavailableComponent}
 ];
 
 @NgModule({

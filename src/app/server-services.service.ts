@@ -49,5 +49,6 @@ export class ServerServicesService {
 
   setSearchValue(text: string) : void {
     this.value.next(text);
+    // console.log(this.value.getValue());
   }
 }

@@ -38,11 +38,4 @@ export class MainHeaderComponent implements OnInit {
     // console.log("this.searchForm.value: ", this.searchForm.value);
     // console.log("this.searchForm.value.searchtext: ", this.searchForm.value.searchtext);
   }
-
-  // sendSearch(text: string) {
-  //   text = text.trim();
-  //   if (!text) { return; }
-  //   this.serverServices.sendSearch(text)
-  //     .subscribe(text => console.log(text));
-  // }
 }
