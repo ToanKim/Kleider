@@ -29,6 +29,9 @@ import { FeeComponent } from './fee/fee.component';
 import { ReceiveComponent } from './receive/receive.component';
 import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
+import { PayComponent } from './pay/pay.component';
+import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.component';
+import { BankComponent } from './bank/bank.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
 
