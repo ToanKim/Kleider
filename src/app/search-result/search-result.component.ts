@@ -48,6 +48,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerServicesService } from 'src/app/server-services.service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-result',
@@ -63,14 +64,10 @@ export class SearchResultComponent implements OnInit {
   imgLink: any[] = [];
 
   constructor(private db: AngularFireDatabase,
-              private serverServices: ServerServicesService){}
+              private serverServices: ServerServicesService,
+              private router: Router){}
   
   ngOnInit() {
-    // this.product = [];
-    // this.itemIsEnable = false;
-    // this.tmp = [];
-    // this.imgLink = [];
-
     this.serverServices.searchVal$.subscribe(text => {
       this.value = text;
       // console.log('::',this.value);
@@ -91,6 +88,9 @@ export class SearchResultComponent implements OnInit {
                 this.itemIsEnable = true;
                 this.imgLink.push('/assets/images/' + (i+1).toString() + ".png");
               }
+            }
+            if (!this.itemIsEnable) {
+              this.router.navigate(['search-result/unavailable']);
             }
           });
       }

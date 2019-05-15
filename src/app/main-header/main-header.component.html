@@ -5,26 +5,22 @@
     
     <div class="header-wrap-icon">
         <div class="search-container">
-            <label>
             <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" maxlength="30">
-                <!-- <button type="submit" routerLink="search-result" (click)="sendSearch(search.value)" alt="search-icon" title="Search" [disabled]="!searchForm.valid">
-                    <i class="fa fa-search" routerLink="search-result" (click)="sendSearch(search.value)"></i>
-                </button> -->
-                <button type="submit" routerLink="search-result" (click)="sendSearch(searchForm.value.searchtext)" alt="search-icon" title="Search">
-                    <i class="fa fa-search" routerLink="search-result" (click)="sendSearch(searchForm.value.searchtext)"></i>
+                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" maxlength="40">
+                <button type="submit" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)" alt="search-icon" title="Search">
+                    <i class="fa fa-search" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)"></i>
                 </button>
             </form>
-            </label>
         </div>
-
-        <a href="/cart">
-            <img id="cart-icon" src="assets/images/shopping-cart.png" alt="cart-icon" title="Your cart">
-        </a>
-            
-        <a href="/customer">
-            <img id="account-icon" src="assets/images/account-icon.png" alt="account icon" title="Account">
-        </a>
+        <div class="icons">
+            <a href="/cart" class="cart-icon">
+                <img id="cart-icon" src="assets/images/shopping-cart.png" alt="cart-icon" title="Your cart">
+            </a>
+                
+            <a href="/customer" class="customer-icon">
+                <img id="account-icon" src="assets/images/account-icon.png" alt="account icon" title="Account">
+            </a>
+        </div>
     </div>
     
 </div>

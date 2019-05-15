@@ -16,8 +16,8 @@ export class MainPageComponent  {
   constructor(db: AngularFireDatabase){
 
     //product
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
+    db.list('/Vu-test').valueChanges().subscribe(prd => {
+      this.Product = prd;
     });
   }
 }
