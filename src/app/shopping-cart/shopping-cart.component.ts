@@ -1,11 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ProductDisplay } from '../Models/ProductDisplay.Model';
 
-import { ProductService } from '../Services/product.service';
-import { Product } from '../Models/Product.Model';
-import { IAlert } from '../Models/IAlert';
-import { SharedService } from '../Services/shared.service';
 import { min } from 'rxjs/operators';
+import {AngularFireDatabase} from 'angularfire2/database';
+import { print } from 'util';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -15,22 +12,42 @@ import { min } from 'rxjs/operators';
 
 export class ShoppingCartComponent implements OnInit {
   count = 1;
-  constructor() { }
+  cart;
+  a;
+  Product: any[];
 
-  ngOnInit() {
-  }
-  
-  add(){
-    this.count = this.count + 1;
-  }
+  constructor(db: AngularFireDatabase){
 
-  sub(){
-    if (this.count > 0 ) 
-    {
-      this.count = this.count - 1;
+    //product
+    db.list('/Vu-test').valueChanges().subscribe(Product => {
+      this.Product = Product;
+      })
+
+     this.cart = db.list('/user-cart');
     }
-    else
-    this.count = 0;
+    ngOnInit() {
+    }
     
-  }
+    add(){
+      this.count = this.count + 1;
+      this.a = ( this.Product[0].Price * this.count);
+      print(this.a);
+      
+    }
+  
+    sub(){
+      if (this.count > 0 ) 
+      {
+        this.count = this.count - 1;
+        this.a = ( this.Product[0].Price * this.count);
+        print(this.a);
+      }
+      else
+      {
+        this.count = 0;
+        this.a = 0;
+        print (this.a) ;
+      }
+    }
 }
+  
