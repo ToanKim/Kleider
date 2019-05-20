@@ -3,6 +3,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { min } from 'rxjs/operators';
 import {AngularFireDatabase} from 'angularfire2/database';
 import { print } from 'util';
+import { AuthService } from '../core/auth.service';
+
+declare global{}
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -10,44 +14,54 @@ import { print } from 'util';
   styleUrls: ['./shopping-cart.component.css']
 })
 
+
+
 export class ShoppingCartComponent implements OnInit {
   count = 1;
   cart;
-  a;
-  Product: any[];
+  defaultQuantity = 1;
+  Product = new Array();
 
-  constructor(db: AngularFireDatabase){
+  
+
+  constructor(public db: AngularFireDatabase, public auth: AuthService){
 
     //product
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
-      this.Product = Product;
-      })
+    
 
      this.cart = db.list('/user-cart');
     }
     ngOnInit() {
+      this.db.list('/Vu-test').valueChanges().subscribe(productList => {
+        const uid = JSON.parse(localStorage.getItem('user')).uid;
+        var cartStorage = JSON.parse(localStorage.getItem(`${uid}`)).productID;
+        
+      this.cart = this.db.list('/user-cart');
+
+        cartStorage.forEach(item => {
+          this.Product.push([productList[item], this.defaultQuantity]);
+        });
+      // this.cart.forEach(item => {
+      //   this.cart.push(this.defaultQuantity, )
+      // });
+      // var quan = 
+      })
     }
-    
-    add(){
-      this.count = this.count + 1;
-      this.a = ( this.Product[0].Price * this.count);
-      print(this.a);
-      
+
+
+    add(index){
+      this.Product[index][1]++;
     }
   
-    sub(){
-      if (this.count > 0 ) 
+    sub(index){
+      if (this.Product[index][1] > 1 ) 
       {
-        this.count = this.count - 1;
-        this.a = ( this.Product[0].Price * this.count);
-        print(this.a);
+        this.Product[index][1]--;
       }
-      else
-      {
-        this.count = 0;
-        this.a = 0;
-        print (this.a) ;
-      }
+    }
+
+    convertToLink(index) {
+      return 'assets/images/' + (index+1).toString() + '.png';
     }
 }
   
