@@ -34,7 +34,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -49,5 +48,6 @@ export class ServerServicesService {
 
   setSearchValue(text: string) : void {
     this.value.next(text);
+    // console.log(this.value.getValue());
   }
 }

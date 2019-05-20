@@ -14,19 +14,14 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CustomerComponent } from './customer/customer.component';
-
-
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './core/auth.service';
-
 import { SearchResultComponent } from './search-result/search-result.component';
 import { ServerServicesService } from 'src/app/server-services.service';
-
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { SupportComponent } from './support/support.component';
 import { ChooseSizeComponent } from './choose-size/choose-size.component';
 import { MaterialComponent } from './material/material.component';
@@ -36,7 +31,9 @@ import { WashingComponent } from './washing/washing.component';
 import { PastComponent } from './past/past.component';
 import { PayComponent } from './pay/pay.component';
 import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.component';
+import { BankComponent } from './bank/bank.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +45,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ShoppingCartComponent,
     MainPageComponent,
     AboutPageComponent,
-
     SearchResultComponent,
     ProductInfoComponent,
     AboutPageComponent,
     CustomerComponent,
-
     SupportComponent,
     ChooseSizeComponent,
     MaterialComponent,
@@ -61,8 +56,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ReceiveComponent,
     WashingComponent,
     PastComponent,
-    PayComponent,
-    ShoppingGuideComponent,
+    UnavailableComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +68,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     AngularFireDatabaseModule,
-    
     ReactiveFormsModule,
   ],
   providers: [

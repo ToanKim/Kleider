@@ -13,6 +13,14 @@
             </div>
           </form>
         </div> -->
+        <div class="form-newsletter">
+          <form [formGroup]="form" accept-charset="UTF-8" class="contact-form" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+              <input requireArrowd type="email" #key routerLink="" formControlName="formName" value placeholder="example@gmail.com">
+              <button type="submit" class="button button-register" (click)="doSth()">Register</button>
+            </div>
+          </form>
+        </div>
       </div>
 
       <div class="number-contact">
