@@ -14,28 +14,27 @@
 <div class="big-container">
   <div class="listproduct">
       <tbody>
+          <div *ngFor = "let pro of Product; let i = index ">
           <tr>
-              <td><img src="assets/images/1.png"></td>
+              <td><img src="{{convertToLink(i)}}"></td>
               <td>
-                  <a href="/pro-inf" class="tshirt">{{Product[0].Name}}</a>
-                  <p><span>{{Product[0].Price}}₫</span></p>
-                  <p class="variant">
-                      <span>{{Product[0].Size}}</span>
-                  </p>
-    
+                      <p>Name: {{pro[0].Name}}</p>
+                      <p>Price: {{pro[0].Price}}</p>
+                      <p>Size: {{pro[0].Size}}</p>
                   <div class="qty">
-                          <button type="button" class="quanty" (click) = "sub()" >-</button>
-                          <input type="text" size="4" name="updates[]" min="1" id="updates_1037942354" data-price="25000000" value="{{count}}" class="item">
-                          <button type="button" class="quanty" (click) = "add()">+</button>
+                          <button type="button" class="quanty" (click) = "sub(i)" >-</button>
+                          <input type="text" size="4" name="updates[]" min="1"  value="{{pro[1]}}" class="item">
+                          <button type="button" class="quanty" (click) = "add(i)">+</button>
                   </div>
                   <p class="price">
-                          <span class="text" >Price: </span>
-                          <button class="line-item-total" (click) = "add()">{{this.a}}</button>
+                          <button class="text" >Price:  </button>
+                          <span class="line-item-total">{{pro[0].Price * pro[1]}}</span>
                   </p>
               </td>
           </tr>
-      </tbody>
-    </div>
+      </div>
+    </tbody>  
+   </div>
     
   <div class = "container">
       <div class="ghichu">
