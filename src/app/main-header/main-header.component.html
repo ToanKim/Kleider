@@ -6,7 +6,7 @@
     <div class="header-wrap-icon">
         <div class="search-container">
             <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
-                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" required>
+                <input type="text" placeholder="Search.." name="search" #search formControlName="searchtext" maxlength="40" required>
                 <button type="submit" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)" alt="search-icon" title="Search">
                     <i class="fa fa-search" routerLink="/search-result" (click)="sendSearch(searchForm.value.searchtext)"></i>
                 </button>
