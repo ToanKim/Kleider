@@ -3,7 +3,7 @@
 <div *ngIf="itemIsEnable" class="resultList">
     <div *ngFor="let p of tmp; let i = index" class="listProduct">
         <div class="imgLink">
-            <img src='{{imgLink[i]}}' routerLink="/pro-inf" class="imgLink" width="300px" height="600px">
+            <img src='{{imgLink[i]}}' routerLink="{{proInf[i]}}" class="imgLink" width="300px" height="600px">
         </div>
         <div class="productInfo">
             <p routerLink="/pro-inf" class="proName"><strong>{{p.Name}}</strong>&nbsp;</p>

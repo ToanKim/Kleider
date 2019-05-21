@@ -34,6 +34,12 @@ import { ShoppingGuideComponent } from './shopping-guide/shopping-guide.componen
 import { BankComponent } from './bank/bank.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
+import { Product2Component } from './product2/product2.component';
+import { Product3Component } from './product3/product3.component';
+import { Product4Component } from './product4/product4.component';
+import { Product5Component } from './product5/product5.component';
+import { Product6Component } from './product6/product6.component';
+import { Product7Component } from './product7/product7.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +62,13 @@ import { UnavailableComponent } from './search-result/unavailable/unavailable.co
     ReceiveComponent,
     WashingComponent,
     PastComponent,
-    UnavailableComponent
+    UnavailableComponent,
+    Product2Component,
+    Product3Component,
+    Product4Component,
+    Product5Component,
+    Product6Component,
+    Product7Component
   ],
   imports: [
     BrowserModule,

@@ -32,11 +32,11 @@ img.imgLink:hover {
 }
 
 .listProduct {
-    width: 70%;
-    height: 400px;
+    width: 50%;
+    height: 300px;
     /* height: 25vh; */
     border: 5px black;
-    /* border-top-style: solid; */
+    border-top-style: solid;
     padding: 30px;
     margin: 20px;
 }

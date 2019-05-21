@@ -62,6 +62,7 @@ export class SearchResultComponent implements OnInit {
   value: any;
   tmp: any[] = [];
   imgLink: any[] = [];
+  proInf: any[] = [];
 
   constructor(private db: AngularFireDatabase,
               private serverServices: ServerServicesService,
@@ -87,6 +88,7 @@ export class SearchResultComponent implements OnInit {
                 this.tmp.push(this.product[i]);
                 this.itemIsEnable = true;
                 this.imgLink.push('/assets/images/' + (i+1).toString() + ".png");
+                this.proInf.push('/pro-inf/' + (i+1).toString());
               }
             }
             if (!this.itemIsEnable) {
