@@ -72,8 +72,6 @@ export class AuthService {
       .then( () => {
         localStorage.removeItem('user');
         this.router.navigate(['/homepage']);
-      })
+      });
   }
-
-  
 }
