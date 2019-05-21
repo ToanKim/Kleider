@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 //database
 import {AngularFireDatabase, AngularFireList} from 'angularfire2/database';
@@ -28,7 +28,7 @@ class CartList{
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
-export class MainPageComponent  {
+export class MainPageComponent {
 
   Product: any[];
   public cart: AngularFireList<CartList[]>;

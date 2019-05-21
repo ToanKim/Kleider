@@ -8,9 +8,11 @@ div.imgLink {
 }
 
 div.productInfo {
-    float: right;
+    float: left;
     width: 70%;
     padding: 10px;
+    line-height: 10px;
+    /* text-align: center; */
 }
 
 img.imgLink {
@@ -23,18 +25,26 @@ img.imgLink {
     /* opacity: 0.7;
     filter: alpha(opacity=70); */
 }
-img.imgLink:hover{
+img.imgLink:hover {
     /* opacity: 1;
     filter: alpha(opacity=100); */
     border: 1px solid gray;
 }
 
-li.listProduct {
+.listProduct {
     width: 70%;
-    height: 300px;
+    height: 400px;
+    /* height: 25vh; */
     border: 5px black;
-    border-top-style: solid;
-    padding: 10px;
+    /* border-top-style: solid; */
+    padding: 30px;
     margin: 20px;
-    list-style: none;
+}
+
+.proName {
+    cursor: pointer;
+}
+
+.proName:hover {
+    color: #66ffcc;
 }

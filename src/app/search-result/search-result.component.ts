@@ -95,5 +95,6 @@ export class SearchResultComponent implements OnInit {
           });
       }
     });
+    // console.log(this.tmp);
   }
 }
