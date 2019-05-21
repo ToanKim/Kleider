@@ -1,11 +1,12 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-// import { ProductDisplay } from '../Models/ProductDisplay.Model';
 
-// import { ProductService } from '../Services/product.service';
-// import { Product } from '../Models/Product.Model';
-// import { IAlert } from '../Models/IAlert';
-// import { SharedService } from '../Services/shared.service';
 import { min } from 'rxjs/operators';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { print } from 'util';
+import { AuthService } from '../core/auth.service';
+
+declare global { }
+
 
 @Component({
   selector: 'app-shopping-cart',
@@ -13,22 +14,47 @@ import { min } from 'rxjs/operators';
   styleUrls: ['./shopping-cart.component.css']
 })
 
+
+
 export class ShoppingCartComponent implements OnInit {
   count = 1;
-  constructor() { }
+  cart;
+  defaultQuantity = 1;
+  Product = new Array();
 
+  constructor(public db: AngularFireDatabase, public auth: AuthService) {
+    this.cart = db.list('/user-cart');
+  }
   ngOnInit() {
-  }
-  
-  add() {
-    this.count = this.count + 1;
+    this.db.list('/Vu-test').valueChanges().subscribe(productList => {
+      const uid = JSON.parse(localStorage.getItem('user')).uid;
+      const cartStorage = JSON.parse(localStorage.getItem(`${uid}`)).productID;
+
+      this.cart = this.db.list('/user-cart');
+
+      cartStorage.forEach(item => {
+        this.Product.push([productList[item], this.defaultQuantity]);
+      });
+      // this.cart.forEach(item => {
+      //   this.cart.push(this.defaultQuantity, )
+      // });
+      // var quan = 
+    })
   }
 
-  sub() {
-    if (this.count > 0 ) {
-      this.count = this.count - 1;
-    } else {
-    this.count = 0;
+
+  add(index) {
+    this.Product[index][1]++;
+  }
+
+  sub(index) {
+    if (this.Product[index][1] > 1) {
+      this.Product[index][1]--;
     }
   }
+
+  convertToLink(index) {
+    return 'assets/images/' + (index + 1).toString() + '.png';
+  }
 }
+

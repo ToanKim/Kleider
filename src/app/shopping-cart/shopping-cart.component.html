@@ -1,50 +1,49 @@
 <div id="top-container">
-    <div id="top-left-container">
-      <ul id="progress-bar">
-        <li class="active">Cart</li>
-        <li >Shipping</li>
-        <li>Billing</li>
-      </ul>
-    </div>
-    <h1 id="top-right-container">
-      
-    </h1>
-  
+  <div id="top-left-container">
+    <ul id="progress-bar">
+      <li class="active">Cart</li>
+      <li >Shipping</li>
+      <li>Billing</li>
+    </ul>
+  </div>
+  <h1 id="top-right-container">
+    
+  </h1>
+
 
 <div class="big-container">
-    <div class="listproduct">
-        <tbody>
-            <tr>
-                <td><img src="assets/images/1.png"></td>
-                <td>
-                    <a href="/pro-inf" class="tshirt">Saigon Vintage</a>
-                    <p><span>250000d    </span></p>
-                    <p class="variant">
-                        <span>S / Black / T-shirt</span>
-                    </p>
-      
-                    <div class="qty">
-                            <button type="button" class="quanty" (click) = "sub()" >-</button>
-                            <input type="text" size="4" name="updates[]" min="1" id="updates_1037942354" data-price="25000000" value="{{count}}" class="item">
-                            <button type="button" class="quanty" (click) = "add()">+</button>
-                    </div>
-                    <p class="price">
-                            <span class="text">Price:</span>
-                            <span class="line-item-total">250,000₫</span>
-                    </p>
-                </td>
-            </tr>
-        </tbody>
+  <div class="listproduct">
+      <tbody>
+          <div *ngFor = "let pro of Product; let i = index ">
+          <tr>
+              <td><img src="{{convertToLink(i)}}"></td>
+              <td>
+                      <p>Name: {{pro[0].Name}}</p>
+                      <p>Price: {{pro[0].Price}}</p>
+                      <p>Size: {{pro[0].Size}}</p>
+                  <div class="qty">
+                          <button type="button" class="quanty" (click) = "sub(i)" >-</button>
+                          <input type="text" size="4" name="updates[]" min="1"  value="{{pro[1]}}" class="item">
+                          <button type="button" class="quanty" (click) = "add(i)">+</button>
+                  </div>
+                  <p class="price">
+                          <button class="text" >Price:  </button>
+                          <span class="line-item-total">{{pro[0].Price * pro[1]}}</span>
+                  </p>
+              </td>
+          </tr>
       </div>
-      
-    <div class = "container">
-        <div class="ghichu">
-            <textarea class="ghichu" placeholder="Note here"></textarea>
-        </div>
-            
-        <div class = "pay">
-            <a href="/homepage"> <button type = "button"> Continue Shopping </button> </a>
-            <a href="/shipping"> <button type="submit"> Buy </button> </a>
-        </div>
-    </div>
+    </tbody>  
+   </div>
+    
+  <div class = "container">
+      <div class="ghichu">
+          <textarea class="ghichu" placeholder="Note here"></textarea>
+      </div>
+          
+      <div class = "pay">
+          <a href="/homepage"> <button type = "button"> Continue Shopping </button> </a>
+          <a href="/shipping"> <button type="submit"> Buy </button> </a>
+      </div>
+  </div>
 </div>
