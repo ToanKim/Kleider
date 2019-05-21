@@ -1,10 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ProductDisplay } from '../Models/ProductDisplay.Model';
+// import { ProductDisplay } from '../Models/ProductDisplay.Model';
 
-import { ProductService } from '../Services/product.service';
-import { Product } from '../Models/Product.Model';
-import { IAlert } from '../Models/IAlert';
-import { SharedService } from '../Services/shared.service';
+// import { ProductService } from '../Services/product.service';
+// import { Product } from '../Models/Product.Model';
+// import { IAlert } from '../Models/IAlert';
+// import { SharedService } from '../Services/shared.service';
 import { min } from 'rxjs/operators';
 
 @Component({
@@ -20,17 +20,15 @@ export class ShoppingCartComponent implements OnInit {
   ngOnInit() {
   }
   
-  add(){
+  add() {
     this.count = this.count + 1;
   }
 
-  sub(){
-    if (this.count > 0 ) 
-    {
+  sub() {
+    if (this.count > 0 ) {
       this.count = this.count - 1;
-    }
-    else
+    } else {
     this.count = 0;
-    
+    }
   }
 }

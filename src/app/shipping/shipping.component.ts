@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import * as MapBoxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -56,7 +56,7 @@ export class ShippingComponent implements OnInit {
 
       const tempDate = new Date();
       this.shippingDate = new Date((tempDate.setDate(tempDate.getDate() + Math.floor(Math.random() * 3))));
-      
+
       this.cost = 10 * this.distance;
     });
   }
@@ -67,7 +67,7 @@ export class ShippingComponent implements OnInit {
 
   confirmNav() {
     if (this.distance === 0) {
-      alert("You have to select a destination to Confirm");
+      alert('You have to select a destination to Confirm');
     } else {
       alert('Thanks for buying');
       this.clearCart();
@@ -77,12 +77,13 @@ export class ShippingComponent implements OnInit {
 
   clearCart() {
     let uid = JSON.parse(localStorage.getItem('user')).uid;
+    localStorage.removeItem(`${uid}`);
     this.db.object(`user-cart/${uid}`).remove();
   }
 
   getProductCost() {
     // console.log(this.auth.userData.uid);
-    let uid = JSON.parse(localStorage.getItem('user')).uid;
+    const uid = JSON.parse(localStorage.getItem('user')).uid;
     this.db.list(`user-cart/${uid}`).valueChanges()
       .subscribe( result => {
         for (let i = 0; i < result.length; i++) {
