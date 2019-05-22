@@ -68,6 +68,9 @@ import { Product7Component } from './product7/product7.component';
     Product4Component,
     Product5Component,
     Product6Component,
+    ShoppingGuideComponent,
+    BankComponent,
+    PayComponent,
     Product7Component
   ],
   imports: [
