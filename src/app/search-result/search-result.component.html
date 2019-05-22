@@ -1,19 +1,21 @@
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search result for "<strong>{{value}}</strong>".</p>
+<head>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">>
+</head>
 
-<div *ngIf="itemIsEnable" class="resultList">
-    <ul>
-        <li *ngFor="let p of tmp; let i = index" class="listProduct">
+<body>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search result for "<strong>{{value}}</strong>".</p>
+    
+    <div *ngIf="itemIsEnable" class="resultList">
+        <div *ngFor="let p of tmp; let i = index" class="listProduct">
+            <p><strong>{{i+1}}.</strong></p>
             <div class="imgLink">
-                <img src='{{imgLink[i]}}' routerLink="/pro-inf" class="imgLink" width="300px" height="600px">
+                <img src='{{imgLink[i]}}' routerLink="{{proInf[i]}}" class="imgLink" width="300px" height="600px">
             </div>
             <div class="productInfo">
-                <p><strong>Name:</strong>&nbsp;{{p.Name}}</p>
-                <p><strong>PID:</strong>&nbsp;{{p.PID}}</p>
+                <p routerLink="{{proInf[i]}}" class="proName"><strong>{{p.Name}}</strong>&nbsp;</p>
                 <p><strong>Price:</strong>&nbsp;{{p.Price}}</p>
-                <p><strong>Size:</strong>&nbsp;{{p.Size}}</p>
-                <p *ngIf="p.Color"><strong>Color:</strong>&nbsp;{{p.Color}}</p>
-                <p *ngIf="p.Description"><strong>Description:</strong>&nbsp;{{p.Description}}</p>
             </div>
-        </li>
-    </ul>
-</div>
+        </div>
+    </div>
+</body>
