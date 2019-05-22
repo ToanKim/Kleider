@@ -8,7 +8,7 @@
     
     <div *ngIf="itemIsEnable" class="resultList">
         <div *ngFor="let p of tmp; let i = index" class="listProduct">
-            <p><strong>{{i+1}}.</strong></p>
+            <p class="test"><strong>{{i+1}}.</strong></p>
             <div class="imgLink">
                 <img src='{{imgLink[i]}}' routerLink="{{proInf[i]}}" class="imgLink" width="300px" height="600px">
             </div>
