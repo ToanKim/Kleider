@@ -40,7 +40,7 @@ export class MainPageComponent {
   // private filter = ''; filter 
 
   constructor(
-    db: AngularFireDatabase,
+    public db: AngularFireDatabase,
     public auth: AuthService
   ) {
     //product
@@ -58,10 +58,10 @@ export class MainPageComponent {
     if (!this.auth.isLoggedIn) {
       this.router.navigate(['/customer'])
     } else {
-      var productCart = new Array();
-      var currentCart = JSON.parse(localStorage.getItem(`${this.auth.userData.uid}`));
+      let productCart = new Array();
+      const currentCart = JSON.parse(localStorage.getItem(`${this.auth.userData.uid}`));
       if (currentCart !== null) {
-        productCart = currentCart.productID
+        productCart = currentCart.productID;
       }
 
       if (productCart.includes(PID)) {
