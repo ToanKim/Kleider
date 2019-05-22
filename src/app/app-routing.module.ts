@@ -25,11 +25,12 @@ import { Product5Component } from './product5/product5.component';
 import { Product6Component } from './product6/product6.component';
 import { Product7Component } from './product7/product7.component';
 import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
+import { CartGuard } from './core/cart.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
-  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
-  { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
+  { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard, CartGuard]},
+  { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard, CartGuard]},
   { path: 'pro-inf', redirectTo: '/homepage', pathMatch: 'full'},
   { path: 'pro-inf/1', component: ProductInfoComponent},
   { path: 'pro-inf/2', component: Product2Component},
@@ -42,7 +43,10 @@ const routes: Routes = [
   { path: 'customer', component: CustomerComponent},
   { path: 'homepage', component: MainPageComponent},
   { path: 'support', component: SupportComponent},
+  { path: 'bank', component: BankComponent},
+  { path: 'pay', component: PayComponent},
   { path: 'choose-size', component: ChooseSizeComponent},
+  { path: 'shopping-guide', component: ShoppingGuideComponent},
   { path: 'material', component: MaterialComponent},
   { path: 'fee', component: FeeComponent},
   { path: 'receive', component: ReceiveComponent},
