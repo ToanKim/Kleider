@@ -18,13 +18,26 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { CustomerComponent } from './customer/customer.component';
 import { AuthGuard } from './core/auth.guard';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { Product2Component } from './product2/product2.component';
+import { Product3Component } from './product3/product3.component';
+import { Product4Component } from './product4/product4.component';
+import { Product5Component } from './product5/product5.component';
+import { Product6Component } from './product6/product6.component';
+import { Product7Component } from './product7/product7.component';
 import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
   { path: 'cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
   { path: 'shipping', component: ShippingComponent, canActivate: [AuthGuard]},
-  { path: 'pro-inf', component: ProductInfoComponent},
+  { path: 'pro-inf', redirectTo: '/homepage', pathMatch: 'full'},
+  { path: 'pro-inf/1', component: ProductInfoComponent},
+  { path: 'pro-inf/2', component: Product2Component},
+  { path: 'pro-inf/3', component: Product3Component},
+  { path: 'pro-inf/4', component: Product4Component},
+  { path: 'pro-inf/5', component: Product5Component},
+  { path: 'pro-inf/6', component: Product6Component},
+  { path: 'pro-inf/7', component: Product7Component},
   { path: 'about', component: AboutPageComponent},
   { path: 'customer', component: CustomerComponent},
   { path: 'homepage', component: MainPageComponent},
