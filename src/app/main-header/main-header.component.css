@@ -1,4 +1,6 @@
-
+* {
+    box-sizing: border-box;
+}
 
 .header-wrap{
     background-color: white;
@@ -24,18 +26,15 @@ h1#site-name {
 }
 
 .header-wrap-icon {
-    width: 30%;
+    width: 40%;
     height: 30px;
-    margin-left: 70%;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
+    margin-left: 60%;
 }
 
 /* -------------
 SEARCH BOX
 ---------------*/
-.search-container {
+/* .search-container {
     float: right;
 }
 
@@ -45,6 +44,7 @@ input[type=text] {
     background: #ededed;
     border: none;
     outline: none;
+    position: sticky;
 }
 
 .search-container button {
@@ -55,6 +55,37 @@ input[type=text] {
     font-size: 17px;
     border: none;
     cursor: pointer;
+    position: sticky;
+}
+
+.search-container button:hover {
+    background: #ccc;
+} */
+
+div.search-container {
+    float: left;
+    width: 50%;
+    height: 30px;
+}
+
+input[type=text] {
+    float: left;
+    padding: 0px 10px 0px 10px;
+    background: #ededed;
+    border: none;
+    outline: none;
+    width: 83.62%;
+    height: 30px;
+}
+
+.search-container button {
+    float: right;
+    padding: 2px;
+    background: #ddd;
+    border: none;
+    cursor: pointer;
+    width: 16.38%;
+    height: 30px;
 }
 
 .search-container button:hover {
@@ -62,17 +93,32 @@ input[type=text] {
 }
 
 /*-------- END OF SEARCH BOX -----------*/
-
-img#cart-icon {
-    width: 30px;
+div.icons {
+    float: right;
+    width: 50%;
+}
+a.cart-icon {
+    float: left;
+    width: 8.19%;
     height: 30px;
-    top: 15px;
+    margin-left: 16.81%;
+    margin-right: 16.81%;
+}
+a.customer-icon {
+    float: left;
+    width: 8.19%;
+    height: 30px;
+    /* margin-left: 16.81%; */
+    margin-right: 16.81%;
+}
+img#cart-icon {
+    width: 100%;
+    height: 30px;
 }
 
 img#account-icon {
-    width: 30px;
+    width: 100%;
     height: 30px;
-    top: 15px;
 }
 
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,13 @@ export class FooterComponent implements OnInit {
 
   ngOnInit() {
   }
+  form = new FormGroup({
+    formName : new FormControl(''),
+  });
+  doSth() {
+    
+  }
+  onSubmit() {
 
+  }
 }

@@ -2,7 +2,6 @@
     display: block;
     position: relative;
     overflow: hidden;
-    height: 100%;
 }
 
 .product1{
@@ -10,7 +9,8 @@
 }
 
 .pro-detail{
-    padding-left: 2em;
+    padding-left: 2.5em;
+    font-weight: bold;
 }
 
 .pro-name{
@@ -26,4 +26,13 @@
     display: inline;
     display: flex;
     flex-direction: row;
+}
+
+.list{
+    padding-left: 3em;
+    /* font-weight: bold; */
+}
+
+#sublist{
+    padding-left: 2em;
 }

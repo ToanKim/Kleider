@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerServicesService } from 'src/app/server-services.service';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-main-header',
@@ -9,13 +11,32 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor(private serverServices: ServerServicesService) { }
+  constructor(private serverServices: ServerServicesService,
+              private router: Router) { }
   value: string;
   ngOnInit() {
-    
+    // this.searchForm = new FormGroup({
+    //   'searchtext' : new FormControl(this.value, [
+    //     Validators.required,
+    //     Validators.maxLength(2)
+    //   ])
+    // });
   }
+
+  // get searchtext() {
+  //   return this.searchForm.get('searchtext');
+  // }
+
   sendSearch(text: string) : void {
-    this.serverServices.setSearchValue(text);
+    if (text) {
+      this.serverServices.setSearchValue(text.trim());
+      this.value = text.trim();
+      this.router.navigateByUrl(
+        '/homepage',
+        {skipLocationChange: true}).then(()=>
+          this.router.navigate(['/search-result'])
+      );
+    }
   }
   searchForm = new FormGroup({
     searchtext : new FormControl(''),
@@ -26,11 +47,4 @@ export class MainHeaderComponent implements OnInit {
     // console.log("this.searchForm.value: ", this.searchForm.value);
     // console.log("this.searchForm.value.searchtext: ", this.searchForm.value.searchtext);
   }
-
-  // sendSearch(text: string) {
-  //   text = text.trim();
-  //   if (!text) { return; }
-  //   this.serverServices.sendSearch(text)
-  //     .subscribe(text => console.log(text));
-  // }
 }
