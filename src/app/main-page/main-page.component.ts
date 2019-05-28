@@ -44,7 +44,7 @@ export class MainPageComponent {
     public auth: AuthService
   ) {
     //product
-    db.list('/Vu-test').valueChanges().subscribe(Product => {
+    db.list('/Products').valueChanges().subscribe(Product => {
       this.Product = Product;
     })
 
