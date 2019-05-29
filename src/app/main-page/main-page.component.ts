@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 
-//database
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 // import {FirebaseListObservable } from '@angular/fire'
 import { FirebaseApp } from '@angular/fire';
@@ -12,15 +11,18 @@ import { realpath } from 'fs';
 import { AuthService } from '../core/auth.service';
 import { Router } from '@angular/router';
 import { Cart } from '../interface/cart';
+import { DataService, MySharedService } from '../core/data.service';
+import { forEach } from '@angular/router/src/utils/collection';
 
 // import { auth } from 'firebase';
 
 
 // import {Cart} from "../Models/Cart.model";
 
-class CartList {
-  constructor(public PID) { };
-}
+// class CartList {
+//   constructor(public PID, ) {
+//    };
+// }
 
 
 @Component({
@@ -28,56 +30,68 @@ class CartList {
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.css']
 })
-export class MainPageComponent {
+export class MainPageComponent implements AfterViewInit {
 
-  Product: any[];
-  public cart: AngularFireList<CartList[]>;
-
-  public router: Router;
-
-  private cartCount = 0;
-  // public auth: AuthService;
-  // private filter = ''; filter 
+  Product: any = [];
+ // public cart: AngularFireList<CartList[]>;
+  cart = [];
 
   constructor(
     public db: AngularFireDatabase,
-    public auth: AuthService
+    public auth: AuthService,
+    public router: Router,
+    public share: MySharedService,
+    // tslint:disable-next-line:variable-name
+    public _dataService: DataService
   ) {
-    //product
-    db.list('/Products').valueChanges().subscribe(Product => {
-      this.Product = Product;
-    })
-
-    //  db.list('/user-cart').snapshotChanges().subscribe( cart => {
-    //    this.cart[0] = cart;
-    //  })  
-  };
-
-  AddtoCart(PID: number) {
-    console.log(this.auth);
-    if (!this.auth.isLoggedIn) {
-      this.router.navigate(['/customer'])
-    } else {
-      let productCart = new Array();
-      const currentCart = JSON.parse(localStorage.getItem(`${this.auth.userData.uid}`));
-      if (currentCart !== null) {
-        productCart = currentCart.productID;
+    this._dataService.get('Products.json').subscribe((response: any) => {
+      // tslint:disable-next-line:forin
+      for (const i in response) {
+        this.Product.push(response[i]);
       }
-
-      if (productCart.includes(PID)) {
-        alert('You already have this product in cart')
-      } else {
-        //  console.log(productCart);
-        productCart.push(PID);
-        const product: Cart = {
-          productID: productCart
-        }
-        localStorage.setItem(`${this.auth.userData.uid}`, JSON.stringify(product));
-      }
-    }
-    // alert("Product " + productCart + " is added.");
+      console.log(this.Product);
+    }, error => {
+    });
   }
+  ngAfterViewInit() {
+    setTimeout(() => {
+      if (this.auth.isLoggedIn) {
+        if (JSON.parse(localStorage.getItem(JSON.parse(localStorage.getItem('user')).uid)) != null) {
+          this.cart = JSON.parse(localStorage.getItem(JSON.parse(localStorage.getItem('user')).uid));
+          this.share.updateMessage(this.cart);
+        }
+        console.log(this.cart);
+      }
+    }, 0);
+  }
+  AddtoCart(item: any) {
+    if (!this.auth.isLoggedIn) {
+      this.router.navigate(['/customer']);
+    } else {
+      let flag = 0;
+      if (this.cart != null) {
+        for (const obj of this.cart) {
+          if (obj.Name === item.Name) {
+          alert('Products already in the cart, please choose another product. Best regards');
+          this.share.updateMessage(this.cart);
+          flag = 1;
+          break;
+        } else {
+        }
+     }
+
+      }
+      if (flag === 0) {
+      this.cart.push(item);
+      this.share.updateMessage(this.cart);
+      localStorage.setItem(this.auth.userData.uid, JSON.stringify(this.cart));
+      alert(item.Name + ' has been added to the cart');
+     }
+      }
+    console.log(this.cart);
+    }
 }
+
 
 
 

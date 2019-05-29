@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 style="color: darkslateblue;
+  text-align: center;
+  margin: 40px;">Orders placed(Order date {{Product[0]?.CreatedDate}})</h2>
+  <table class="table text-center table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">IMG</th>
+          <th scope="col">Name</th>
+          <th scope="col">Size</th>
+          <th scope="col">Price</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of Product; let i = index">
+          <th scope="row">{{i}}</th>
+          <td><img width="55" src="{{item.img}}"></td>
+          <td>{{item.Name}}</td>
+          <td>{{item.Size}}</td>
+          <td>{{item.Price}} VND</td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: left" colspan="5">Note: {{Product[0]?.Note}}</td>
+          </tr>
+          <tr>
+              <td style="text-align: left" colspan="5">Ship cost: <b>{{Product[0]?.Ship}} VND</b></td>
+            </tr>
+        <tr>
+          <td style="text-align: left; font-weight: bold" colspan="4">Total: {{sum}} VND</td>
+          <td><button style="background: crimson" (click)="cancel()"><i class="fa fa-close"></i> Cancel order</button></td>
+        </tr>
+      </tbody>
+    </table>
+</div>

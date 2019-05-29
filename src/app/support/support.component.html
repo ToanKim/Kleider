@@ -2,7 +2,26 @@
 <br>
 <h1 id="title">The most frequently asked questions</h1>
 <br>
-<br>
+<div class="ng-autocomplete" style="MARGIN: AUTO;">
+        <ng-autocomplete #tet
+          [data]="data"
+          (keydown.enter)="onenter()"
+          (inputChanged)="change(tet)"
+          [searchKeyword]="keyword"
+          placeHolder="Search question"
+          (selected)='selectEvent($event)'
+          [itemTemplate]="itemTemplate"
+          [notFoundTemplate]="notFoundTemplate">                                 
+        </ng-autocomplete>
+         
+        <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+        </ng-template>
+         
+        <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+        </ng-template>
+        </div>
 <div id="container">
     <div id="left-container">
         <ul id="left-box">

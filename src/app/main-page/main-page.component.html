@@ -1,120 +1,19 @@
-<div class = "container">
-    <div class="pro-loop"> 
-        <div class="product1">
-            <div class="pro-img">
-                <a href="pro-inf/1"><img src = "assets/images/1.png" title="real men dont cry" style="height: 300px;"></a>
-            </div>
-            <div class="pro-detail">
-                          <div class="list">
-                              <a href= "/cart">{{Product[0].Name}}</a>
-                              <br>
-                          <div id = "sublist">{{Product[0].Price}}₫</div>
-                      
-                          <button (click) = "AddtoCart(0)"> Add to cart</button>
-                          </div>
-            </div>
-        </div>
-    </div>
-  
-    <div class="pro-loop">
-        <div class="product2">
-            <div class="pro-img">
-                <a href="pro-inf/2"> <img src = "assets/images/2.png" title="Vintage" style="height:300px"> </a>
-            </div>
-            <div class="pro-detail">
-                    <div class="box-pro-detail">
-                        <div class="list">
-                                <a href= "/cart">{{Product[1].Name}}</a>
-                                <br>
-                          <div id = "sublist">{{Product[1].Price}}₫</div>
-                      
-                          <button (click) = "AddtoCart(1)"> Add to cart</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-    <div class="pro-loop">
-            <div class="product3">
+<div class="container">
+    <div class="row">
+        <div class="pro-loop col-md-3" style="margin-bottom: 35px" *ngFor="let item of Product"> 
+            <div class="product{{item.PID}}">
                 <div class="pro-img">
-                    <a href="pro-inf/3"><img src = "assets/images/3.png" title="Marvel Studios" style="height:300px"> </a>
+                    <a routerLink="/pro-inf/{{item.PID}}"><img src = "{{item.img}}" title="{{item.Name}}" style="height: 300px;"></a>
                 </div>
                 <div class="pro-detail">
-                    <div class="pro-detail">
-                        <a href= "/cart">{{Product[2].Name}}</a>
-                        <br>
-                          <div id = "sublist">{{Product[2].Price}}₫</div>
-                          <button (click) = "AddtoCart(2)"> Add to cart</button>
+                            <div class="list">
+                                  <a routerLink= "/cart">{{item.Name}}</a>
+                                  <br>
+                              <div id = "sublist">{{item.Price}}₫</div>
+                          
+                              <button (click) = "AddtoCart(item)"> Add to cart</button>
+                            </div>
                 </div>
-            </div>
-        </div>
-    </div>
-  
-    <div class="pro-loop">
-            <div class="product4">
-                <div class="pro-img">
-                    <a href="pro-inf/4"><img src = "assets/images/4.png" title="Hotter Ex" style="height:300px"> </a>
-                </div>
-                <div class="pro-detail">
-                    <div class="pro-detail">
-                        <a href= "/cart">{{Product[3].Name}}</a>
-                        <br>
-                          <div id = "sublist">{{Product[3].Price}}₫</div>
-                          <button (click) = "AddtoCart(3)"> Add to cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  
-  <div class="container">
-
-        <div class="pro-loop">
-                <div class="product5">
-                    <div class="pro-img">
-                        <a href="pro-inf/5"><img src = "assets/images/5.png" title="Do what u want" style="height:300px"> </a>
-                    </div>
-                    <div class="pro-detail">
-                        <div class="pro-detail">
-                            <a href= "/cart">{{Product[4].Name}}</a>
-                            <br>
-                            <div id = "sublist">{{Product[4].Price}}₫</div>
-                            <button (click) = "AddtoCart(4)"> Add to cart</button>
-                        </div>
-                </div>
-            </div>
-        </div>
-    <div class="pro-loop">
-            <div class="product5">
-                <div class="pro-img">
-                    <a href="pro-inf/6"><img src = "assets/images/6.png" title="Monalisa" style="height:300px"> </a>
-                </div>
-                <div class="pro-detail">
-                    <div class="pro-detail">
-                          <a href= "/cart">{{Product[5].Name}}</a>
-                          <br>
-                          <div id = "sublist">{{Product[5].Price}}₫</div>
-                          <button (click) = "AddtoCart(5)"> Add to cart</button>
-                       </div>
-                  </div>
-        </div>
-    </div>
-  
-    <div class="pro-loop">
-            <div class="product6">
-                <div class="pro-img">
-                    <a href="pro-inf/7"><img src = "assets/images/7.png" title="Thanos hand" style="height:300px"> </a>
-
-                </div>
-                <div class="pro-detail">
-                    <div class="pro-detail">
-                        
-                        <a href= "/cart">{{Product[6].Name}}</a>
-                        <br>
-                        <div id = "sublist">{{Product[6].Price}}₫</div>
-                        <button (click) = "AddtoCart(6)"> Add to cart</button>
-                    </div>
             </div>
         </div>
     </div>

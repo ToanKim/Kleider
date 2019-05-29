@@ -20,9 +20,10 @@ export class CartGuard implements CanActivate {
     state: RouterStateSnapshot
   ): Observable<boolean> | Promise<boolean> | boolean {
     const uid = JSON.parse(localStorage.getItem('user')).uid;
-
+    var fsd = JSON.parse(localStorage.getItem(`${uid}`));
     // console.log(uid);
     if (JSON.parse(localStorage.getItem(`${uid}`)) == null) {
+      
       alert(`You don't have any products in your cart`);
       this.router.navigate(['/homepage']);
     }

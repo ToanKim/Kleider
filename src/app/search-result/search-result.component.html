@@ -7,13 +7,13 @@
     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Search result for "<strong>{{value}}</strong>".</p>
     
     <div *ngIf="itemIsEnable" class="resultList">
-        <div *ngFor="let p of product; let i = index" class="listProduct">
+        <div *ngFor="let p of tmp; let i = index" class="listProduct">
             <p class="test"><strong>{{i+1}}.</strong></p>
             <div class="imgLink">
-                <img src='/assets/images/{{(p.PID)}}.png' routerLink="/pro-inf/{{p.PID}}" class="imgLink" width="300px" height="600px">
+                <img src='{{imgLink[i]}}' routerLink="{{proInf[i]}}" class="imgLink" width="300px" height="600px">
             </div>
             <div class="productInfo">
-                <p routerLink="/pro-inf/{{p.PID}}" class="proName"><strong>{{p.Name}}</strong>&nbsp;</p>
+                <p routerLink="{{proInf[i]}}" class="proName"><strong>{{p.Name}}</strong>&nbsp;</p>
                 <p><strong>PID:</strong>&nbsp;{{p.PID}}</p>
                 <p><strong>Price:</strong>&nbsp;{{p.Price}}</p>
             </div>

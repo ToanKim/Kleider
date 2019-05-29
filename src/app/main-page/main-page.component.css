@@ -2,17 +2,15 @@
     display: block;
     position: relative;
     overflow: hidden;
-    /* height: 100%; */
+    text-align: center
 }
 
-/* .product1{
+.product1{
     height: 382px;
-} */
+}
 
 .pro-detail{
-    display: block;
-    text-align: center;
-    /* padding-left: 2em; */
+    font-weight: bold;
 }
 
 
@@ -21,4 +19,9 @@
     display: inline;
     display: flex;
     flex-direction: row;
+}
+
+.list{
+    padding-left: 3em;
+    /* font-weight: bold; */
 }

@@ -26,6 +26,7 @@ import { Product6Component } from './product6/product6.component';
 import { Product7Component } from './product7/product7.component';
 import { UnavailableComponent } from './search-result/unavailable/unavailable.component';
 import { CartGuard } from './core/cart.guard';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full'},
@@ -53,7 +54,8 @@ const routes: Routes = [
   { path: 'washing', component: WashingComponent},
   { path: 'past', component: PastComponent},
   { path: 'search-result', component: SearchResultComponent},
-  { path: 'search-result/unavailable', component: UnavailableComponent}
+  { path: 'search-result/unavailable', component: UnavailableComponent},
+  { path: 'order', component: OrderComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({
