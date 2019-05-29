@@ -2,37 +2,23 @@
     display: block;
     position: relative;
     overflow: hidden;
+    /* height: 100%; */
 }
 
-.product1{
+/* .product1{
     height: 382px;
-}
+} */
 
 .pro-detail{
-    padding-left: 2.5em;
-    font-weight: bold;
+    display: block;
+    text-align: center;
+    /* padding-left: 2em; */
 }
 
-.pro-name{
-    padding-left: 1em;
-}
-
-.pro-price{
-    padding-left: 3em;
-}
 
 .container{
     padding-top: 5em;
     display: inline;
     display: flex;
     flex-direction: row;
-}
-
-.list{
-    padding-left: 3em;
-    /* font-weight: bold; */
-}
-
-#sublist{
-    padding-left: 2em;
 }
