@@ -11,14 +11,15 @@ import { Location } from '@angular/common';
 export class AppComponent implements OnInit{
   
   isAdmin: boolean = false;
+  url: string;
 
   constructor(private router: Router,
               private serverServices: ServerServicesService,
               private route: Location) {}
 
   ngOnInit() {
-    console.log(this.route.path());
-    if (this.route.path().includes('admin'))
+    this.url = this.route.path().slice(1)
+    if (this.url == '~')
       this.isAdmin = true;
   }
 }

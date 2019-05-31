@@ -115,11 +115,11 @@ img{
 }
 
 .ghichu{
-    height: 100px;
-    width: 400px;
-    color: white;
-    position: absolute;
-    background-color: rgb(206, 193, 193);
+  height: 100px;
+  width: 50%;
+  color: white;
+  padding-bottom: 100px;
+  margin-left: 13%;
 }
 
 .pay{
@@ -129,13 +129,10 @@ img{
 }
 
 .qty, .price{
-    position: absolute;
     display: inline;
 }
 
-.price{
-    right: 0;
-}
+
 .tshirt{
     font-weight: bold;
 }

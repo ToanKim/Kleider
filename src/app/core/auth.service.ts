@@ -51,7 +51,7 @@ export class AuthService {
   AuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['/homepage']);
+        window.location.href = '/homepage';
         this.setUserData(result.user);
       });
   }

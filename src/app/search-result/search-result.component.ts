@@ -59,7 +59,7 @@ export class SearchResultComponent implements OnInit {
 
   product: any[];
   itemIsEnable = false;
-  value: string;
+  value: any;
 
   constructor(private db: AngularFireDatabase,
               private serverServices: ServerServicesService,

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import * as MapBoxDirections from '@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions';
 
 import { AngularFireDatabase } from '@angular/fire/database';
+import { DataService } from '../core/data.service';
 
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
 
@@ -27,6 +28,7 @@ export class ShippingComponent implements OnInit {
 
   constructor(
     public router: Router,
+    public _dataService: DataService,
     public db: AngularFireDatabase
   ) {
   }
@@ -53,7 +55,7 @@ export class ShippingComponent implements OnInit {
     directions.on('route', e => {
       const routes = e.route;
       this.distance = routes.map(r => r.distance);
-
+debugger
       const tempDate = new Date();
       this.shippingDate = new Date((tempDate.setDate(tempDate.getDate() + Math.floor(Math.random() * 3))));
 
@@ -75,22 +77,45 @@ export class ShippingComponent implements OnInit {
     }
   }
 
+  addcart() {
+    if (this.distance === 0) {
+      alert('You have to select a destination to Confirm');
+    } else {
+      const today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const yyyy = today.getFullYear();
+      const date = dd + '/' + mm + '/' + yyyy;
+      const Product = JSON.parse(localStorage.getItem(JSON.parse(localStorage.getItem('user')).uid));
+      Product.forEach(obj => {
+        obj.CreatedDate = date;
+        obj.Ship = this.cost;
+      });
+      this._dataService.put('order/' + JSON.parse(localStorage.getItem('user')).uid + '.json', Product).subscribe((response: any) => {
+        this.clearCart();
+      }, error => {
+        console.log(error);
+      });
+    }
+  }
   clearCart() {
-    let uid = JSON.parse(localStorage.getItem('user')).uid;
+    alert('Order Success - You can cancel your order within 5 days. Thank you! ');
+    const uid = JSON.parse(localStorage.getItem('user')).uid;
     localStorage.removeItem(`${uid}`);
-    this.db.object(`user-cart/${uid}`).remove();
+    window.location.href = '/order';
   }
 
   getProductCost() {
     // console.log(this.auth.userData.uid);
     const uid = JSON.parse(localStorage.getItem('user')).uid;
-    this.db.list(`user-cart/${uid}`).valueChanges()
-      .subscribe( result => {
-        for (let i = 0; i < result.length; i++) {
-// tslint:disable-next-line: no-string-literal
-          this.total += result[i]['Quantity'] * result[i]['Price'];
-        }
-      });
+//     this.db.list(`user-cart/${uid}`).valueChanges()
+//       .subscribe( result => {
+//         for (let i = 0; i < result.length; i++) {
+// // tslint:disable-next-line: no-string-literal
+//           this.total += result[i]['Quantity'] * result[i]['Price'];
+//         }
+//       });
+
   }
 
 

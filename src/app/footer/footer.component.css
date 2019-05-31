@@ -70,9 +70,9 @@
 }
 
 .input-group button {
-    height: 46px;
+    height: 47px;
     right: 0;
-    top: 0;
+    top: 2px;
     padding: 13px 25px;
 }
 
