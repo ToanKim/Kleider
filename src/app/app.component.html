@@ -1,12 +1,17 @@
 <div>
-    <app-main-header></app-main-header>
-    <app-nav-bar></app-nav-bar>
-
-    <div id="page-container">
-        <router-outlet></router-outlet>
+    <div *ngIf="!isAdmin; else admin" class="switch">
+        <app-main-header></app-main-header>
+        <app-nav-bar></app-nav-bar>
+        <div id="page-container">
+            <router-outlet></router-outlet>
+        </div>
+        <br>
+        <app-footer id="footer"></app-footer>
     </div>
-    <br>
-    <app-footer id="footer"></app-footer>
+
+    <ng-template #admin>
+        <app-admin></app-admin>
+    </ng-template>
 </div>
 
 

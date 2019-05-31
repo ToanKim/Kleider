@@ -39,9 +39,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class ServerServicesService {
 
-  constructor(private http: HttpClient) {
-
-  }
+  constructor() {}
 
   private value: BehaviorSubject<string> = new BehaviorSubject<string>('');
   searchVal$: Observable<string> = this.value.asObservable();

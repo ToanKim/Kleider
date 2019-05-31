@@ -49,7 +49,6 @@ import { Component, OnInit } from '@angular/core';
 import { ServerServicesService } from 'src/app/server-services.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
-import { SWITCH_COMPILE_NGMODULE__POST_R3__ } from '@angular/core/src/metadata/ng_module';
 
 @Component({
   selector: 'app-search-result',
@@ -60,7 +59,7 @@ export class SearchResultComponent implements OnInit {
 
   product: any[];
   itemIsEnable = false;
-  value: any;
+  value: string;
 
   constructor(private db: AngularFireDatabase,
               private serverServices: ServerServicesService,

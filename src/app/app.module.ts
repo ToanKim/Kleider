@@ -40,6 +40,7 @@ import { Product4Component } from './product4/product4.component';
 import { Product5Component } from './product5/product5.component';
 import { Product6Component } from './product6/product6.component';
 import { Product7Component } from './product7/product7.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { Product7Component } from './product7/product7.component';
     ShoppingGuideComponent,
     BankComponent,
     PayComponent,
-    Product7Component
+    Product7Component,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
