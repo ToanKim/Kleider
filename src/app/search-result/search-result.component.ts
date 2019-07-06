@@ -76,11 +76,7 @@ export class SearchResultComponent implements OnInit {
 
   productSearch() {
     this.db.list('Products').valueChanges()
-    .subscribe(product =>
-      { 
-        this.product = product;
-        this.searchLoop(this.product);
-      });
+    .subscribe(product => { this.searchLoop(product);});
   }
 
   searchLoop(product: any[]) {
