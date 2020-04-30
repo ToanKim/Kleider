@@ -34,7 +34,7 @@
     "core-js": "^2.5.4",
     "esri-leaflet": "^2.2.4",
     "firebase": "^6.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mapbox-gl": "^0.54.0",
     "ng-bootstrap": "^1.6.3",
     "popper.js": "^1.15.0",
