@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
-    "@mapbox/mapbox-gl-directions": "^4.0.0",
+    "@mapbox/mapbox-gl-directions": "^4.1.1",
     "@mapbox/polyline": "^1.1.0",
     "@ng-bootstrap/schematics": "^2.0.0-alpha.1",
     "@turf/meta": "^6.0.2",
